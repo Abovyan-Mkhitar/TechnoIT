@@ -1,0 +1,741 @@
+Last login: Mon Jan  5 23:21:45 on ttys000
+Grigor@MacBook-Pro-6 ~ % npx create-strapi-app@latest
+
+ Strapi   v5.33.1 🚀 Let's create your new project
+
+? What is the name of your project? Lusi_Jewelry
+ 
+🚀 Welcome to Strapi! Ready to bring your project to life?
+ 
+Create a free account and get:
+30 days of access to the Growth plan, which includes:
+✨ Strapi AI: content-type builder, media library and translations
+✅ Live Preview
+✅ Single Sign-On (SSO) login
+✅ Content History
+✅ Releases
+
+? Please log in or sign up. Skip
+? Do you want to use the default database (sqlite) ? Yes
+? Start with an example structure & data? No
+? Start with Typescript? Yes
+? Install dependencies with npm? Yes
+? Initialize a git repository? Yes
+? Participate in anonymous A/B testing (to improve Strapi)? No
+
+ Strapi   Creating a new application at /Users/Grigor/Lusi_Jewelry
+
+   deps   Installing dependencies with npm
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated buildmail@3.10.0: This project is unmaintained
+npm warn deprecated mailcomposer@3.12.0: This project is unmaintained
+npm warn deprecated keygrip@1.1.0: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm warn deprecated boolean@3.2.0: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm warn deprecated @koa/router@12.0.2: Please upgrade to v15 or higher. All reported bugs in this version are fixed in newer releases, dependencies have been updated, and security has been improved.
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+
+added 1444 packages, and audited 1445 packages in 4m
+
+267 packages are looking for funding
+  run `npm fund` for details
+
+23 vulnerabilities (9 low, 2 moderate, 12 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+       ✓  Dependencies installed
+
+    git   Initializing git repository.
+
+       ✓  Initialized a git repository.
+
+ Strapi   Your application was created!
+          Available commands in your project:
+          
+          Start Strapi in watch mode. (Changes in Strapi project files will trigger a server restart)
+          npm run develop
+          
+          Start Strapi without watch mode.
+          npm run start
+          
+          Build Strapi admin panel.
+          npm run build
+          
+          Deploy Strapi project.
+          npm run deploy
+          
+          Display all available commands.
+          npm run strapi
+
+          To get started run
+          
+          cd /Users/Grigor/Lusi_Jewelry
+          npm run develop
+Grigor@MacBook-Pro-6 ~ %  cd /Users/Grigor/Lusi_Jewelry
+Grigor@MacBook-Pro-6 Lusi_Jewelry %  npm run develop
+
+> lusi-jewelry@0.1.0 develop
+> strapi develop
+
+⠸ Loading Strapi[2026-01-05 23:31:38.511] info: The Users & Permissions plugin automatically generated a jwt secret and stored it in .env under the name JWT_SECRET.
+[2026-01-05 23:31:38.511] warn: admin.auth.options.expiresIn is deprecated and will be removed in Strapi 6. Please configure admin.auth.sessions.maxRefreshTokenLifespan and admin.auth.sessions.maxSessionLifespan.
+⠋ Building build context
+⠼ Loading Strapi[INFO] Including the following ENV variables as part of the JS bundle:
+    - ADMIN_PATH
+    - STRAPI_ADMIN_BACKEND_URL
+    - STRAPI_TELEMETRY_DISABLED
+    - STRAPI_AI_URL
+    - STRAPI_ANALYTICS_URL
+✔ Building build context (62ms)
+✔ Creating admin (590ms)
+✔ Loading Strapi (1810ms)
+✔ Generating types (158ms)
+✔ Cleaning dist dir (5ms)
+✔ Compiling TS (920ms)
+
+ Project information                                                          
+
+┌────────────────────┬──────────────────────────────────────────────────┐
+│ Time               │ Mon Jan 05 2026 23:31:40 GMT+0400 (Armenia Stan… │
+│ Launched in        │ 2895 ms                                          │
+│ Environment        │ development                                      │
+│ Process PID        │ 54404                                            │
+│ Version            │ 5.33.1 (node v20.19.6)                           │
+│ Edition            │ Community                                        │
+│ Database           │ sqlite                                           │
+│ Database name      │ .tmp/data.db                                     │
+└────────────────────┴──────────────────────────────────────────────────┘
+
+ Actions available                                                            
+
+One more thing...
+Create your first administrator 💻 by going to the administration panel at:
+
+┌─────────────────────────────┐
+│ http://localhost:1337/admin │
+└─────────────────────────────┘
+
+[2026-01-05 23:31:40.394] info: Strapi started successfully
+[2026-01-05 23:31:40.668] http: GET /admin (25 ms) 200
+[2026-01-05 23:31:42.297] http: GET /admin/project-type (5 ms) 200
+[2026-01-05 23:31:42.300] http: GET /favicon.ico (2 ms) 200
+[2026-01-05 23:31:42.403] http: GET /admin/init (3 ms) 200
+[2026-01-05 23:32:40.661] http: POST /admin/register-admin (137 ms) 200
+[2026-01-05 23:32:40.698] http: GET /admin/users/me (19 ms) 200
+[2026-01-05 23:32:40.718] http: GET /admin/users/me/permissions (17 ms) 200
+[2026-01-05 23:32:40.732] http: GET /admin/information (13 ms) 200
+[2026-01-05 23:32:40.732] http: GET /admin/telemetry-properties (12 ms) 200
+[2026-01-05 23:32:40.802] http: GET /admin/guided-tour-meta (11 ms) 200
+[2026-01-05 23:32:40.811] http: GET /admin/homepage/layout (7 ms) 200
+[2026-01-05 23:32:40.818] http: GET /admin/license-limit-information (15 ms) 200
+[2026-01-05 23:32:40.941] http: GET /content-manager/homepage/recent-documents?action=update (14 ms) 200
+[2026-01-05 23:32:40.949] http: GET /content-manager/homepage/recent-documents?action=publish (7 ms) 200
+[2026-01-05 23:32:40.955] http: GET /content-manager/homepage/count-documents (6 ms) 200
+[2026-01-05 23:32:40.962] http: GET /admin/homepage/key-statistics (6 ms) 200
+[2026-01-05 23:32:44.013] http: GET /content-manager/init (18 ms) 200
+[2026-01-05 23:32:44.026] http: GET /content-manager/content-types-settings (13 ms) 200
+[2026-01-05 23:32:44.125] http: GET /content-manager/init (9 ms) 200
+[2026-01-05 23:32:44.195] http: GET /content-manager/content-types/plugin::users-permissions.user/configuration (21 ms) 200
+[2026-01-05 23:32:44.206] http: GET /content-manager/collection-types/plugin::users-permissions.user?page=1&pageSize=10&sort=username%3AASC (10 ms) 200
+[2026-01-05 23:32:45.441] http: GET /upload/settings (7 ms) 200
+[2026-01-05 23:32:45.446] http: GET /upload/configuration (5 ms) 200
+[2026-01-05 23:32:45.503] http: GET /upload/files?sort=createdAt:DESC&page=1&pageSize=10&filters[$and][0][folderPath][$eq]=/ (13 ms) 200
+[2026-01-05 23:32:45.514] http: GET /upload/folders?sort=createdAt:DESC&page=1&pageSize=10&pagination[pageSize]=-1&filters[$and][0][parent][id][$null]=true (7 ms) 200
+[2026-01-05 23:32:45.556] http: GET /upload/settings (13 ms) 200
+[2026-01-05 23:32:46.205] http: GET /content-manager/init (15 ms) 200
+[2026-01-05 23:32:46.799] http: GET /admin/license-limit-information (6 ms) 200
+[2026-01-05 23:33:01.581] http: GET /content-manager/init (17 ms) 200
+[2026-01-05 23:33:02.700] http: GET /upload/settings (32 ms) 200
+[2026-01-05 23:33:02.715] http: GET /upload/configuration (13 ms) 200
+[2026-01-05 23:33:02.724] http: GET /upload/files?sort=createdAt:DESC&page=1&pageSize=10&filters[$and][0][folderPath][$eq]=/ (8 ms) 200
+[2026-01-05 23:33:02.733] http: GET /upload/folders?sort=createdAt:DESC&page=1&pageSize=10&pagination[pageSize]=-1&filters[$and][0][parent][id][$null]=true (6 ms) 200
+[2026-01-05 23:33:02.748] http: GET /upload/settings (5 ms) 200
+[2026-01-05 23:33:04.496] http: GET /content-manager/init (16 ms) 200
+[2026-01-05 23:33:05.278] http: GET /admin/license-limit-information (7 ms) 200
+[2026-01-05 23:33:14.877] http: GET /admin/license-limit-information (8 ms) 200
+[2026-01-05 23:33:16.243] http: GET /content-type-builder/schema (6 ms) 200
+[2026-01-05 23:33:16.250] http: GET /content-type-builder/reserved-names (6 ms) 200
+[2026-01-05 23:33:16.256] http: GET /admin/ai-usage (20 ms) 200
+[2026-01-05 23:33:16.258] http: GET /admin/ai-token (8 ms) 200
+[2026-01-05 23:33:16.327] http: GET /admin/ai-token (2 ms) 200
+[2026-01-05 23:33:21.680] http: GET /admin/license-limit-information (5 ms) 200
+[2026-01-05 23:36:08.964] http: GET /content-manager/init (36 ms) 200
+[2026-01-05 23:36:08.979] http: GET /content-manager/content-types-settings (14 ms) 200
+[2026-01-05 23:36:09.051] http: GET /content-manager/content-types/plugin::users-permissions.user/configuration (16 ms) 200
+[2026-01-05 23:36:09.063] http: GET /content-manager/collection-types/plugin::users-permissions.user?page=1&pageSize=10&sort=username%3AASC (12 ms) 200
+[2026-01-05 23:38:01.565] http: GET /admin/guided-tour-meta (19 ms) 200
+[2026-01-05 23:38:01.573] http: GET /admin/homepage/layout (7 ms) 200
+[2026-01-05 23:38:01.577] http: GET /admin/license-limit-information (41 ms) 200
+[2026-01-05 23:38:01.627] http: GET /content-manager/homepage/recent-documents?action=update (11 ms) 200
+[2026-01-05 23:38:01.639] http: GET /content-manager/homepage/recent-documents?action=publish (12 ms) 200
+[2026-01-05 23:38:01.651] http: GET /content-manager/homepage/count-documents (11 ms) 200
+[2026-01-05 23:38:01.659] http: GET /admin/homepage/key-statistics (8 ms) 200
+[2026-01-05 23:38:06.799] http: GET /content-type-builder/schema (21 ms) 200
+[2026-01-05 23:38:06.808] http: GET /content-type-builder/reserved-names (8 ms) 200
+[2026-01-05 23:38:06.811] http: GET /admin/ai-usage (35 ms) 200
+[2026-01-05 23:38:06.812] http: GET /admin/ai-token (4 ms) 200
+[2026-01-05 23:38:06.825] http: GET /admin/ai-token (2 ms) 200
+[2026-01-06 11:07:17.741] http: POST /content-type-builder/update-schema (12 ms) 401
+[2026-01-06 11:07:25.685] http: POST /content-type-builder/update-schema (6 ms) 401
+[2026-01-06 11:08:26.163] http: POST /content-type-builder/update-schema (3 ms) 401
+[2026-01-06 11:08:45.373] http: GET /admin/plugins/content-type-builder/content-types/api::category.category (8 ms) 200
+[2026-01-06 11:08:45.694] http: GET /admin/project-type (4 ms) 200
+[2026-01-06 11:08:45.837] http: GET /admin/init (8 ms) 200
+[2026-01-06 11:08:45.844] http: GET /admin/users/me (6 ms) 401
+[2026-01-06 11:08:45.848] http: GET /admin/users/me/permissions (8 ms) 401
+[2026-01-06 11:08:45.853] http: GET /admin/telemetry-properties (4 ms) 401
+[2026-01-06 11:08:45.854] http: GET /admin/information (2 ms) 401
+[2026-01-06 11:08:45.855] http: POST /admin/access-token (1 ms) 401
+[2026-01-06 11:08:45.862] http: POST /admin/logout (2 ms) 401
+[2026-01-06 11:08:45.865] http: POST /admin/logout (3 ms) 401
+[2026-01-06 11:08:45.865] http: POST /admin/logout (2 ms) 401
+[2026-01-06 11:08:45.933] http: GET /admin/auth/login (6 ms) 200
+[2026-01-06 11:08:46.180] http: GET /admin/project-type (4 ms) 200
+[2026-01-06 11:08:46.228] http: GET /admin/init (6 ms) 200
+[2026-01-06 11:08:59.915] http: POST /admin/login (112 ms) 200
+[2026-01-06 11:08:59.932] http: GET /admin/users/me (9 ms) 200
+[2026-01-06 11:08:59.940] http: GET /admin/users/me/permissions (8 ms) 200
+[2026-01-06 11:08:59.949] http: GET /admin/telemetry-properties (8 ms) 200
+[2026-01-06 11:08:59.981] http: GET /admin/information (11 ms) 200
+[2026-01-06 11:09:00.032] http: GET /admin/license-limit-information (2 ms) 200
+[2026-01-06 11:09:00.043] http: GET /admin/guided-tour-meta (8 ms) 200
+[2026-01-06 11:09:00.051] http: GET /admin/homepage/layout (7 ms) 200
+[2026-01-06 11:09:00.131] http: GET /content-manager/homepage/recent-documents?action=update (7 ms) 200
+[2026-01-06 11:09:00.138] http: GET /content-manager/homepage/recent-documents?action=publish (7 ms) 200
+[2026-01-06 11:09:00.144] http: GET /content-manager/homepage/count-documents (5 ms) 200
+[2026-01-06 11:09:00.159] http: GET /admin/homepage/key-statistics (13 ms) 200
+[2026-01-06 11:09:05.348] http: GET /upload/settings (14 ms) 200
+[2026-01-06 11:09:05.362] http: GET /upload/configuration (10 ms) 200
+[2026-01-06 11:09:05.414] http: GET /upload/files?sort=createdAt:DESC&page=1&pageSize=10&filters[$and][0][folderPath][$eq]=/ (16 ms) 200
+[2026-01-06 11:09:05.425] http: GET /upload/folders?sort=createdAt:DESC&page=1&pageSize=10&pagination[pageSize]=-1&filters[$and][0][parent][id][$null]=true (7 ms) 200
+[2026-01-06 11:09:05.458] http: GET /upload/settings (5 ms) 200
+[2026-01-06 11:09:06.143] http: GET /content-manager/init (13 ms) 200
+[2026-01-06 11:09:06.153] http: GET /content-manager/content-types-settings (9 ms) 200
+[2026-01-06 11:09:06.231] http: GET /content-manager/init (16 ms) 200
+[2026-01-06 11:09:06.274] http: GET /content-manager/content-types/plugin::users-permissions.user/configuration (17 ms) 200
+[2026-01-06 11:09:06.282] http: GET /content-manager/collection-types/plugin::users-permissions.user?page=1&pageSize=10&sort=username%3AASC (8 ms) 200
+[2026-01-06 11:09:10.700] http: GET /i18n/settings (22 ms) 200
+[2026-01-06 11:09:10.707] http: GET /i18n/ai-localization-jobs/collection-types/plugin::users-permissions.user/undefined (7 ms) 200
+[2026-01-06 11:09:10.717] http: GET /i18n/locales (9 ms) 200
+[2026-01-06 11:09:10.727] http: GET /content-manager/relations/plugin::users-permissions.user/role?id=&pageSize=10&_q=&page=1 (8 ms) 200
+[2026-01-06 11:09:10.729] http: GET /admin/ai-feature-config (11 ms) 200
+[2026-01-06 11:09:14.381] http: GET /upload/settings (14 ms) 200
+[2026-01-06 11:09:14.392] http: GET /upload/configuration (10 ms) 200
+[2026-01-06 11:09:14.406] http: GET /upload/files?sort=createdAt:DESC&page=1&pageSize=10&filters[$and][0][folderPath][$eq]=/ (8 ms) 200
+[2026-01-06 11:09:14.423] http: GET /upload/folders?sort=createdAt:DESC&page=1&pageSize=10&pagination[pageSize]=-1&filters[$and][0][parent][id][$null]=true (13 ms) 200
+[2026-01-06 11:09:14.443] http: GET /upload/settings (5 ms) 200
+[2026-01-06 11:09:15.478] http: GET /content-type-builder/schema (15 ms) 200
+[2026-01-06 11:09:15.486] http: GET /content-type-builder/reserved-names (7 ms) 200
+[2026-01-06 11:09:15.489] http: GET /admin/ai-usage (29 ms) 200
+[2026-01-06 11:09:15.490] http: GET /admin/ai-token (4 ms) 200
+[2026-01-06 11:09:15.506] http: GET /admin/ai-token (2 ms) 200
+[2026-01-06 11:10:37.534] http: POST /content-type-builder/update-schema (141 ms) 200
+[2026-01-06 11:10:37.542] http: GET /content-type-builder/update-schema-status (5 ms) 200
+✔ Cleaning dist dir (13ms)
+[2026-01-06 11:10:37.596] info: File created: /Users/Grigor/Lusi_Jewelry/src/api/category/controllers/category.ts
+[2026-01-06 11:10:37.596] info: File created: /Users/Grigor/Lusi_Jewelry/src/api/category/routes/category.ts
+[2026-01-06 11:10:37.596] info: File created: /Users/Grigor/Lusi_Jewelry/src/api/category/services/category.ts
+[2026-01-06 11:10:37.596] info: File created: /Users/Grigor/Lusi_Jewelry/src/api/category/content-types/category/schema.json
+[2026-01-06 11:10:37.752] http: GET /content-type-builder/update-schema-status (4 ms) 200
+[2026-01-06 11:10:37.965] http: GET /content-type-builder/update-schema-status (6 ms) 200
+[2026-01-06 11:10:38.175] http: GET /content-type-builder/update-schema-status (4 ms) 200
+[2026-01-06 11:10:38.385] http: GET /content-type-builder/update-schema-status (4 ms) 200
+[2026-01-06 11:10:38.551] info: Shutting down Strapi
+[2026-01-06 11:10:38.554] info: Strapi has been shut down
+⠸ Loading Strapi[2026-01-06 11:10:40.344] warn: admin.auth.options.expiresIn is deprecated and will be removed in Strapi 6. Please configure admin.auth.sessions.maxRefreshTokenLifespan and admin.auth.sessions.maxSessionLifespan.
+⠋ Building build context
+⠼ Loading Strapi[INFO] Including the following ENV variables as part of the JS bundle:
+    - ADMIN_PATH
+    - STRAPI_ADMIN_BACKEND_URL
+    - STRAPI_TELEMETRY_DISABLED
+    - STRAPI_AI_URL
+    - STRAPI_ANALYTICS_URL
+✔ Building build context (58ms)
+✔ Creating admin (307ms)
+✔ Loading Strapi (935ms)
+✔ Generating types (121ms)
+✔ Cleaning dist dir (3ms)
+✔ Compiling TS (1023ms)
+
+ Project information                                                          
+
+┌────────────────────┬──────────────────────────────────────────────────┐
+│ Time               │ Tue Jan 06 2026 11:10:41 GMT+0400 (Armenia Stan… │
+│ Launched in        │ 2082 ms                                          │
+│ Environment        │ development                                      │
+│ Process PID        │ 57320                                            │
+│ Version            │ 5.33.1 (node v20.19.6)                           │
+│ Edition            │ Community                                        │
+│ Database           │ sqlite                                           │
+│ Database name      │ .tmp/data.db                                     │
+└────────────────────┴──────────────────────────────────────────────────┘
+
+ Actions available                                                            
+
+Welcome back!
+To access the server ⚡️, go to:
+http://localhost:1337
+
+[2026-01-06 11:10:41.934] info: Strapi started successfully
+[2026-01-06 11:10:42.086] http: GET /content-type-builder/update-schema-status (18 ms) 200
+[2026-01-06 11:10:42.100] http: GET /content-type-builder/schema (10 ms) 200
+[2026-01-06 11:10:42.106] http: GET /content-type-builder/reserved-names (5 ms) 200
+[2026-01-06 11:10:42.145] http: GET /admin/users/me/permissions (11 ms) 200
+[2026-01-06 11:10:47.158] http: GET /admin/plugins/content-type-builder/content-types/api::category.category (30 ms) 200
+[2026-01-06 11:10:47.486] http: GET /apple-touch-icon-precomposed.png (1 ms) 404
+[2026-01-06 11:10:47.488] http: GET /apple-touch-icon.png (1 ms) 404
+[2026-01-06 11:10:47.723] http: GET /admin/project-type (5 ms) 200
+[2026-01-06 11:10:47.908] http: GET /admin/init (3 ms) 200
+[2026-01-06 11:10:47.913] http: GET /admin/users/me (5 ms) 200
+[2026-01-06 11:10:47.920] http: GET /admin/users/me/permissions (7 ms) 200
+[2026-01-06 11:10:47.930] http: GET /admin/information (10 ms) 200
+[2026-01-06 11:10:47.931] http: GET /admin/telemetry-properties (10 ms) 200
+[2026-01-06 11:10:48.012] http: GET /content-type-builder/schema (5 ms) 200
+[2026-01-06 11:10:48.019] http: GET /content-type-builder/reserved-names (4 ms) 200
+[2026-01-06 11:10:48.023] http: GET /admin/license-limit-information (17 ms) 200
+[2026-01-06 11:10:48.024] http: GET /admin/ai-usage (17 ms) 200
+[2026-01-06 11:10:48.027] http: GET /admin/ai-token (8 ms) 200
+[2026-01-06 11:10:48.055] http: GET /admin/ai-token (2 ms) 200
+[2026-01-06 11:10:52.615] http: GET /content-manager/init (15 ms) 200
+[2026-01-06 11:10:52.627] http: GET /content-manager/content-types-settings (12 ms) 200
+[2026-01-06 11:10:52.676] http: GET /content-manager/init (5 ms) 200
+[2026-01-06 11:10:52.724] http: GET /content-manager/content-types/api::category.category/configuration (12 ms) 200
+[2026-01-06 11:10:52.738] http: GET /content-manager/collection-types/api::category.category?page=1&pageSize=10&sort=name_hy%3AASC (14 ms) 200
+[2026-01-06 11:10:55.409] http: GET /i18n/settings (24 ms) 200
+[2026-01-06 11:10:55.416] http: GET /i18n/ai-localization-jobs/collection-types/api::category.category/undefined (6 ms) 200
+[2026-01-06 11:10:55.423] http: GET /i18n/locales (6 ms) 200
+[2026-01-06 11:10:55.438] http: POST /content-manager/uid/generate? (13 ms) 200
+[2026-01-06 11:10:55.440] http: GET /admin/ai-feature-config (16 ms) 200
+[2026-01-06 11:10:55.821] http: POST /content-manager/uid/check-availability? (24 ms) 200
+[2026-01-06 11:11:18.804] http: POST /content-manager/uid/generate? (20 ms) 200
+[2026-01-06 11:11:19.166] http: POST /content-manager/uid/check-availability? (29 ms) 200
+[2026-01-06 11:12:54.540] http: POST /content-manager/collection-types/api::category.category/actions/publish? (45 ms) 200
+[2026-01-06 11:12:54.551] http: GET /i18n/ai-localization-jobs/collection-types/api::category.category/undefined (7 ms) 200
+[2026-01-06 11:12:54.598] http: GET /content-manager/collection-types/api::category.category/k0t80nk9mzgpfpn1mf62u4ud? (11 ms) 200
+[2026-01-06 11:12:54.635] http: GET /i18n/ai-localization-jobs/collection-types/api::category.category/k0t80nk9mzgpfpn1mf62u4ud (5 ms) 200
+[2026-01-06 11:12:54.639] http: GET /admin/ai-feature-config (3 ms) 200
+[2026-01-06 11:12:54.644] http: GET /content-manager/preview/url/api::category.category?documentId=k0t80nk9mzgpfpn1mf62u4ud&locale=&status=published (5 ms) 404
+[2026-01-06 11:12:54.672] http: GET /admin/ai-feature-config (2 ms) 200
+[2026-01-06 11:12:54.679] http: GET /content-manager/collection-types/api::category.category/k0t80nk9mzgpfpn1mf62u4ud/actions/countDraftRelations? (7 ms) 200
+[2026-01-06 11:12:56.896] http: GET /content-manager/collection-types/api::category.category?page=1&pageSize=10&sort=name_hy%3AASC (29 ms) 200
+[2026-01-06 11:12:56.950] http: GET /admin/ai-feature-config (9 ms) 200
+[2026-01-06 11:12:58.833] http: GET /admin/ai-feature-config (9 ms) 200
+[2026-01-06 11:12:58.849] http: POST /content-manager/uid/generate? (15 ms) 200
+[2026-01-06 11:12:58.855] http: GET /admin/ai-feature-config (2 ms) 200
+[2026-01-06 11:12:59.233] http: POST /content-manager/uid/check-availability? (33 ms) 200
+[2026-01-06 11:14:05.911] http: POST /content-manager/uid/generate? (23 ms) 200
+[2026-01-06 11:14:06.253] http: POST /content-manager/uid/check-availability? (25 ms) 200
+[2026-01-06 11:14:13.284] http: POST /content-manager/collection-types/api::category.category/actions/publish? (38 ms) 200
+[2026-01-06 11:14:13.294] http: GET /i18n/ai-localization-jobs/collection-types/api::category.category/undefined (6 ms) 200
+[2026-01-06 11:14:13.327] http: GET /content-manager/collection-types/api::category.category/h2e8zkulmw4gz640f9kokfh8? (10 ms) 200
+[2026-01-06 11:14:13.352] http: GET /i18n/ai-localization-jobs/collection-types/api::category.category/h2e8zkulmw4gz640f9kokfh8 (5 ms) 200
+[2026-01-06 11:14:13.358] http: GET /content-manager/preview/url/api::category.category?documentId=h2e8zkulmw4gz640f9kokfh8&locale=&status=published (4 ms) 404
+[2026-01-06 11:14:13.360] http: GET /admin/ai-feature-config (7 ms) 200
+[2026-01-06 11:14:13.387] http: GET /content-manager/collection-types/api::category.category/h2e8zkulmw4gz640f9kokfh8/actions/countDraftRelations? (6 ms) 200
+[2026-01-06 11:14:13.388] http: GET /admin/ai-feature-config (8 ms) 200
+[2026-01-06 11:14:16.137] http: GET /content-manager/collection-types/api::category.category?page=1&pageSize=10&sort=name_hy%3AASC (37 ms) 200
+[2026-01-06 11:14:16.168] http: GET /admin/ai-feature-config (5 ms) 200
+[2026-01-06 11:14:17.214] http: POST /content-manager/uid/generate? (19 ms) 200
+[2026-01-06 11:14:17.216] http: GET /admin/ai-feature-config (28 ms) 200
+[2026-01-06 11:14:25.104] http: POST /content-manager/uid/generate? (18 ms) 200
+[2026-01-06 11:14:25.437] http: POST /content-manager/uid/check-availability? (18 ms) 200
+[2026-01-06 11:14:35.216] http: POST /content-manager/collection-types/api::category.category/actions/publish? (39 ms) 200
+[2026-01-06 11:14:35.235] http: GET /content-manager/collection-types/api::category.category?page=1&pageSize=10&sort=name_hy%3AASC (14 ms) 200
+[2026-01-06 11:14:35.242] http: GET /i18n/ai-localization-jobs/collection-types/api::category.category/undefined (6 ms) 200
+[2026-01-06 11:14:35.257] http: GET /content-manager/collection-types/api::category.category/lcje4et4o36hxzlpud3bgxqc? (11 ms) 200
+[2026-01-06 11:14:35.279] http: GET /i18n/ai-localization-jobs/collection-types/api::category.category/lcje4et4o36hxzlpud3bgxqc (5 ms) 200
+[2026-01-06 11:14:35.284] http: GET /content-manager/preview/url/api::category.category?documentId=lcje4et4o36hxzlpud3bgxqc&locale=&status=published (4 ms) 404
+[2026-01-06 11:14:35.286] http: GET /admin/ai-feature-config (7 ms) 200
+[2026-01-06 11:14:35.311] http: GET /content-manager/collection-types/api::category.category/lcje4et4o36hxzlpud3bgxqc/actions/countDraftRelations? (5 ms) 200
+[2026-01-06 11:14:35.312] http: GET /admin/ai-feature-config (8 ms) 200
+[2026-01-06 11:14:44.701] http: POST /content-manager/uid/generate? (23 ms) 200
+[2026-01-06 11:14:45.044] http: POST /content-manager/uid/check-availability? (25 ms) 200
+[2026-01-06 11:14:53.134] http: POST /content-manager/collection-types/api::category.category/lcje4et4o36hxzlpud3bgxqc/actions/publish? (37 ms) 200
+[2026-01-06 11:14:53.150] http: GET /content-manager/collection-types/api::category.category?page=1&pageSize=10&sort=name_hy%3AASC (12 ms) 200
+[2026-01-06 11:14:53.162] http: GET /content-manager/collection-types/api::category.category/lcje4et4o36hxzlpud3bgxqc? (11 ms) 200
+[2026-01-06 11:14:53.167] http: GET /i18n/ai-localization-jobs/collection-types/api::category.category/lcje4et4o36hxzlpud3bgxqc (4 ms) 200
+[2026-01-06 11:14:53.200] http: GET /content-manager/collection-types/api::category.category/lcje4et4o36hxzlpud3bgxqc/actions/countDraftRelations? (6 ms) 200
+[2026-01-06 11:14:54.926] http: GET /admin/ai-feature-config (8 ms) 200
+[2026-01-06 11:15:01.714] http: GET /admin/content-manager/collection-types/api::category.category?page=1&pageSize=10&sort=name_hy%3AASC (10 ms) 200
+[2026-01-06 11:15:01.995] http: GET /admin/project-type (3 ms) 200
+[2026-01-06 11:15:02.062] http: GET /admin/init (5 ms) 200
+[2026-01-06 11:15:02.075] http: GET /admin/users/me (12 ms) 200
+[2026-01-06 11:15:02.081] http: GET /admin/users/me/permissions (16 ms) 200
+[2026-01-06 11:15:02.091] http: GET /admin/information (10 ms) 200
+[2026-01-06 11:15:02.091] http: GET /admin/telemetry-properties (9 ms) 200
+[2026-01-06 11:15:02.126] http: GET /content-manager/init (5 ms) 200
+[2026-01-06 11:15:02.134] http: GET /content-manager/content-types-settings (8 ms) 200
+[2026-01-06 11:15:02.136] http: GET /admin/license-limit-information (16 ms) 200
+[2026-01-06 11:15:02.186] http: GET /content-manager/init (5 ms) 200
+[2026-01-06 11:15:02.220] http: GET /content-manager/content-types/api::category.category/configuration (14 ms) 200
+[2026-01-06 11:15:02.231] http: GET /content-manager/collection-types/api::category.category?page=1&pageSize=10&sort=name_hy%3AASC (11 ms) 200
+[2026-01-06 11:15:02.310] http: GET /i18n/locales (16 ms) 200
+[2026-01-06 11:15:02.312] http: GET /admin/ai-feature-config (21 ms) 200
+[2026-01-06 11:15:12.008] http: GET /i18n/settings (17 ms) 200
+[2026-01-06 11:15:12.020] http: GET /i18n/ai-localization-jobs/collection-types/api::category.category/undefined (10 ms) 200
+[2026-01-06 11:15:12.029] http: POST /content-manager/uid/generate? (7 ms) 200
+[2026-01-06 11:15:12.031] http: GET /admin/ai-feature-config (10 ms) 200
+[2026-01-06 11:15:12.401] http: POST /content-manager/uid/check-availability? (26 ms) 200
+[2026-01-06 11:15:24.183] http: POST /content-manager/uid/generate? (20 ms) 200
+[2026-01-06 11:15:24.526] http: POST /content-manager/uid/check-availability? (28 ms) 200
+[2026-01-06 11:15:25.468] http: POST /content-manager/collection-types/api::category.category/actions/publish? (34 ms) 200
+[2026-01-06 11:15:25.485] http: GET /content-manager/collection-types/api::category.category?page=1&pageSize=10&sort=name_hy%3AASC (12 ms) 200
+[2026-01-06 11:15:25.490] http: GET /i18n/ai-localization-jobs/collection-types/api::category.category/undefined (4 ms) 200
+[2026-01-06 11:15:25.527] http: GET /content-manager/collection-types/api::category.category/bkh0rsyvl9ftzqg1l2e6038q? (10 ms) 200
+[2026-01-06 11:15:25.558] http: GET /i18n/ai-localization-jobs/collection-types/api::category.category/bkh0rsyvl9ftzqg1l2e6038q (4 ms) 200
+[2026-01-06 11:15:25.561] http: GET /admin/ai-feature-config (2 ms) 200
+[2026-01-06 11:15:25.566] http: GET /content-manager/preview/url/api::category.category?documentId=bkh0rsyvl9ftzqg1l2e6038q&locale=&status=published (4 ms) 404
+[2026-01-06 11:15:25.596] http: GET /admin/ai-feature-config (1 ms) 200
+[2026-01-06 11:15:25.601] http: GET /content-manager/collection-types/api::category.category/bkh0rsyvl9ftzqg1l2e6038q/actions/countDraftRelations? (5 ms) 200
+[2026-01-06 11:15:27.547] http: GET /admin/ai-feature-config (5 ms) 200
+[2026-01-06 11:15:47.722] http: GET /content-type-builder/schema (18 ms) 200
+[2026-01-06 11:15:47.728] http: GET /content-type-builder/reserved-names (5 ms) 200
+[2026-01-06 11:15:47.731] http: GET /admin/ai-token (3 ms) 200
+[2026-01-06 11:15:47.732] http: GET /admin/ai-usage (31 ms) 200
+[2026-01-06 11:15:47.745] http: GET /admin/ai-token (2 ms) 200
+[2026-01-06 11:36:48.702] info: File changed: /Users/Grigor/Lusi_Jewelry/src/api/category/content-types/category/schema.json
+[2026-01-06 11:36:48.703] http: POST /content-type-builder/update-schema (150 ms) 200
+✔ Cleaning dist dir (7ms)
+[2026-01-06 11:36:48.717] http: GET /content-type-builder/update-schema-status (11 ms) 200
+[2026-01-06 11:36:48.755] info: File changed: /Users/Grigor/Lusi_Jewelry/src/api/category/content-types/category/schema.json
+[2026-01-06 11:36:48.757] info: File created: /Users/Grigor/Lusi_Jewelry/src/api/product/controllers/product.ts
+[2026-01-06 11:36:48.757] info: File created: /Users/Grigor/Lusi_Jewelry/src/api/product/routes/product.ts
+[2026-01-06 11:36:48.757] info: File created: /Users/Grigor/Lusi_Jewelry/src/api/product/services/product.ts
+[2026-01-06 11:36:48.758] info: File created: /Users/Grigor/Lusi_Jewelry/src/api/product/content-types/product/schema.json
+[2026-01-06 11:36:48.926] http: GET /content-type-builder/update-schema-status (4 ms) 200
+[2026-01-06 11:36:49.139] http: GET /content-type-builder/update-schema-status (5 ms) 200
+[2026-01-06 11:36:49.348] http: GET /content-type-builder/update-schema-status (4 ms) 200
+[2026-01-06 11:36:49.559] http: GET /content-type-builder/update-schema-status (5 ms) 200
+[2026-01-06 11:36:49.689] info: Shutting down Strapi
+[2026-01-06 11:36:49.690] info: Strapi has been shut down
+⠸ Loading Strapi[2026-01-06 11:36:51.404] warn: admin.auth.options.expiresIn is deprecated and will be removed in Strapi 6. Please configure admin.auth.sessions.maxRefreshTokenLifespan and admin.auth.sessions.maxSessionLifespan.
+⠋ Building build context
+⠼ Loading Strapi[INFO] Including the following ENV variables as part of the JS bundle:
+    - ADMIN_PATH
+    - STRAPI_ADMIN_BACKEND_URL
+    - STRAPI_TELEMETRY_DISABLED
+    - STRAPI_AI_URL
+    - STRAPI_ANALYTICS_URL
+✔ Building build context (33ms)
+✔ Creating admin (293ms)
+✔ Loading Strapi (900ms)
+✔ Generating types (126ms)
+✔ Cleaning dist dir (3ms)
+✔ Compiling TS (973ms)
+
+ Project information                                                          
+
+┌────────────────────┬──────────────────────────────────────────────────┐
+│ Time               │ Tue Jan 06 2026 11:36:52 GMT+0400 (Armenia Stan… │
+│ Launched in        │ 2003 ms                                          │
+│ Environment        │ development                                      │
+│ Process PID        │ 57547                                            │
+│ Version            │ 5.33.1 (node v20.19.6)                           │
+│ Edition            │ Community                                        │
+│ Database           │ sqlite                                           │
+│ Database name      │ .tmp/data.db                                     │
+└────────────────────┴──────────────────────────────────────────────────┘
+
+ Actions available                                                            
+
+Welcome back!
+To access the server ⚡️, go to:
+http://localhost:1337
+
+[2026-01-06 11:36:52.905] info: Strapi started successfully
+[2026-01-06 11:36:53.110] http: GET /content-type-builder/update-schema-status (34 ms) 200
+[2026-01-06 11:36:53.130] http: GET /content-type-builder/schema (13 ms) 200
+[2026-01-06 11:36:53.136] http: GET /content-type-builder/reserved-names (5 ms) 200
+[2026-01-06 11:36:53.198] http: GET /admin/users/me/permissions (12 ms) 200
+[2026-01-06 11:36:53.817] http: GET /admin/plugins/content-type-builder/content-types/api::product.product (37 ms) 200
+[2026-01-06 11:36:54.305] http: GET /admin/project-type (4 ms) 200
+[2026-01-06 11:36:54.476] http: GET /admin/init (2 ms) 200
+[2026-01-06 11:36:54.485] http: GET /admin/users/me (7 ms) 200
+[2026-01-06 11:36:54.492] http: GET /admin/users/me/permissions (7 ms) 200
+[2026-01-06 11:36:54.504] http: GET /admin/information (12 ms) 200
+[2026-01-06 11:36:54.505] http: GET /admin/telemetry-properties (12 ms) 200
+[2026-01-06 11:36:54.572] http: GET /admin/license-limit-information (3 ms) 200
+[2026-01-06 11:36:54.577] http: GET /content-type-builder/schema (4 ms) 200
+[2026-01-06 11:36:54.581] http: GET /content-type-builder/reserved-names (4 ms) 200
+[2026-01-06 11:36:54.587] http: GET /admin/ai-token (5 ms) 200
+[2026-01-06 11:36:54.588] http: GET /admin/ai-usage (16 ms) 200
+[2026-01-06 11:36:54.616] http: GET /admin/ai-token (2 ms) 200
+[2026-01-06 11:37:38.856] http: GET /admin/license-limit-information (8 ms) 200
+[2026-01-06 11:37:42.855] http: GET /admin/users/?pageSize=10&page=1&sort=firstname (23 ms) 200
+[2026-01-06 11:38:10.753] http: GET /users-permissions/roles (29 ms) 200
+[2026-01-06 11:38:13.092] http: GET /users-permissions/permissions (25 ms) 200
+[2026-01-06 11:38:13.100] http: GET /users-permissions/routes (7 ms) 200
+[2026-01-06 11:38:13.111] http: GET /users-permissions/roles/2 (10 ms) 200
+[2026-01-06 11:38:57.222] http: PUT /users-permissions/roles/2 (38 ms) 200
+[2026-01-06 11:38:57.232] http: GET /users-permissions/roles/2 (7 ms) 200
+[2026-01-06 11:39:11.355] http: GET /admin/guided-tour-meta (3 ms) 401
+[2026-01-06 11:39:11.359] http: GET /admin/homepage/layout (3 ms) 401
+[2026-01-06 11:39:11.364] http: GET /admin/license-limit-information (15 ms) 200
+[2026-01-06 11:39:11.422] http: POST /admin/access-token (10 ms) 200
+[2026-01-06 11:39:11.429] http: GET /content-manager/homepage/recent-documents?action=update (1 ms) 401
+[2026-01-06 11:39:11.430] http: GET /content-manager/homepage/recent-documents?action=publish (1 ms) 401
+[2026-01-06 11:39:11.431] http: GET /content-manager/homepage/count-documents (1 ms) 401
+[2026-01-06 11:39:11.439] http: GET /admin/guided-tour-meta (7 ms) 200
+[2026-01-06 11:39:11.446] http: GET /admin/homepage/layout (6 ms) 200
+[2026-01-06 11:39:11.451] http: POST /admin/access-token (11 ms) 200
+[2026-01-06 11:39:11.458] http: GET /admin/homepage/key-statistics (7 ms) 200
+[2026-01-06 11:39:11.508] http: GET /content-manager/homepage/recent-documents?action=update (19 ms) 200
+[2026-01-06 11:39:11.520] http: GET /content-manager/homepage/recent-documents?action=publish (12 ms) 200
+[2026-01-06 11:39:11.527] http: GET /content-manager/homepage/count-documents (7 ms) 200
+[2026-01-06 11:39:13.418] http: GET /content-manager/init (17 ms) 200
+[2026-01-06 11:39:13.429] http: GET /content-manager/content-types-settings (11 ms) 200
+[2026-01-06 11:39:13.476] http: GET /content-manager/init (5 ms) 200
+[2026-01-06 11:39:13.517] http: GET /content-manager/content-types/api::category.category/configuration (11 ms) 200
+[2026-01-06 11:39:13.534] http: GET /content-manager/collection-types/api::category.category?page=1&pageSize=10&sort=name_hy%3AASC (17 ms) 200
+[2026-01-06 11:39:13.607] http: GET /i18n/locales (10 ms) 200
+[2026-01-06 11:39:13.610] http: GET /admin/ai-feature-config (15 ms) 200
+[2026-01-06 11:39:14.850] http: GET /content-manager/content-types/api::product.product/configuration (22 ms) 200
+[2026-01-06 11:39:14.861] http: GET /content-manager/collection-types/api::product.product?page=1&pageSize=10&sort=title_hy%3AASC (10 ms) 200
+[2026-01-06 11:39:16.420] http: GET /i18n/settings (23 ms) 200
+[2026-01-06 11:39:16.425] http: GET /i18n/ai-localization-jobs/collection-types/api::product.product/undefined (4 ms) 200
+[2026-01-06 11:39:16.434] http: GET /content-manager/relations/api::product.product/category?id=&pageSize=10&_q=&page=1 (7 ms) 200
+[2026-01-06 11:39:16.436] http: GET /admin/ai-feature-config (10 ms) 200
+[2026-01-06 11:39:16.631] http: GET /admin/ai-feature-config (8 ms) 200
+[2026-01-06 11:40:35.741] http: POST /content-manager/uid/generate? (23 ms) 200
+[2026-01-06 11:40:36.108] http: POST /content-manager/uid/check-availability? (24 ms) 200
+[2026-01-06 11:40:37.115] http: GET /content-manager/relations/api::product.product/category?id=&pageSize=10&_q=&page=1 (22 ms) 200
+[2026-01-06 11:40:39.451] http: GET /content-manager/relations/api::product.product/category?id=&pageSize=10&idsToOmit[0]=1&_q=&page=1 (22 ms) 200
+[2026-01-06 11:40:39.464] http: GET /content-manager/collection-types/api::category.category/k0t80nk9mzgpfpn1mf62u4ud? (12 ms) 200
+[2026-01-06 11:40:39.723] http: GET /content-manager/relations/api::product.product/category?id=&pageSize=10&idsToOmit[0]=1&_q=%D5%84%D5%A1%D5%BF%D5%A1%D5%B6%D5%AB%D5%B6%D5%A5%D6%80&page=1 (23 ms) 200
+[2026-01-06 11:41:28.610] http: GET /upload/settings (19 ms) 200
+[2026-01-06 11:41:28.618] http: GET /upload/configuration (7 ms) 200
+[2026-01-06 11:41:28.627] http: GET /upload/files?page=1&sort=updatedAt:DESC&pageSize=10&filters[$and][0][folderPath][$eq]=/&folder= (8 ms) 200
+[2026-01-06 11:41:28.634] http: GET /upload/files?page=1&sort=createdAt:DESC&pageSize=10&filters[$and][0][folderPath][$eq]=/&folder= (7 ms) 200
+[2026-01-06 11:41:28.646] http: GET /upload/folders?page=1&sort=createdAt:DESC&pageSize=10&filters[$and][0][parent][id][$null]=true&pagination[pageSize]=-1 (8 ms) 200
+[2026-01-06 11:41:31.808] http: GET /upload/folder-structure (17 ms) 200
+[2026-01-06 11:41:31.819] http: GET /upload/settings (10 ms) 200
+[2026-01-06 11:41:33.311] http: GET /upload/settings (22 ms) 200
+[2026-01-06 11:41:33.317] http: GET /upload/configuration (6 ms) 200
+[2026-01-06 11:41:33.324] http: GET /upload/files?page=1&sort=updatedAt:DESC&pageSize=10&filters[$and][0][folderPath][$eq]=/&folder= (6 ms) 200
+[2026-01-06 11:41:33.330] http: GET /upload/files?page=1&sort=createdAt:DESC&pageSize=10&filters[$and][0][folderPath][$eq]=/&folder= (6 ms) 200
+[2026-01-06 11:41:33.344] http: GET /upload/folders?page=1&sort=createdAt:DESC&pageSize=10&filters[$and][0][parent][id][$null]=true&pagination[pageSize]=-1 (6 ms) 200
+[2026-01-06 11:41:34.738] http: GET /upload/settings (20 ms) 200
+[2026-01-06 11:42:01.947] http: GET /upload/settings (17 ms) 200
+[2026-01-06 11:42:04.626] warn: No upload security configuration found. Consider configuring plugin.upload.security for enhanced file validation.
+[2026-01-06 11:42:04.632] warn: No upload security configuration found. Consider configuring plugin.upload.security for enhanced file validation.
+[2026-01-06 11:42:04.639] warn: No upload security configuration found. Consider configuring plugin.upload.security for enhanced file validation.
+[2026-01-06 11:42:04.645] warn: No upload security configuration found. Consider configuring plugin.upload.security for enhanced file validation.
+[2026-01-06 11:42:05.140] http: POST /upload (532 ms) 201
+[2026-01-06 11:42:05.143] http: POST /upload (540 ms) 201
+[2026-01-06 11:42:05.150] http: POST /upload (558 ms) 201
+[2026-01-06 11:42:05.153] http: POST /upload (542 ms) 201
+[2026-01-06 11:42:05.219] http: GET /upload/settings (25 ms) 200
+[2026-01-06 11:42:05.225] http: GET /upload/configuration (6 ms) 200
+[2026-01-06 11:42:05.235] http: GET /upload/files?page=1&sort=createdAt:DESC&pageSize=10&filters[$and][0][folderPath][$eq]=/&folder= (10 ms) 200
+[2026-01-06 11:42:05.245] http: GET /upload/folders?page=1&sort=createdAt:DESC&pageSize=10&filters[$and][0][parent][id][$null]=true&pagination[pageSize]=-1 (6 ms) 200
+[2026-01-06 11:42:05.263] http: GET /uploads/thumbnail_tiffani_xach_11qar_2_6mm_cc5a3db917.jpg?updatedAt=2026-01-06T07%3A42%3A04.843Z (1 ms) 200
+[2026-01-06 11:42:05.263] http: GET /uploads/thumbnail_tiffani_xach_11qar_2_6mm_51_83bd8aaea1.jpg?updatedAt=2026-01-06T07%3A42%3A04.841Z (3 ms) 200
+[2026-01-06 11:42:05.264] http: GET /uploads/thumbnail_1_336ca33004.jpg?updatedAt=2026-01-06T07%3A42%3A04.831Z (2 ms) 200
+[2026-01-06 11:42:05.264] http: GET /uploads/thumbnail_tiffani_xach_11qar_2_6mm_52_52116c4bf3.jpg?updatedAt=2026-01-06T07%3A42%3A04.852Z (1 ms) 200
+[2026-01-06 11:42:06.671] http: GET /uploads/thumbnail_tiffani_xach_11qar_2_6mm_51_83bd8aaea1.jpg?updatedAt=2026-01-06T07:42:04.841Z (8 ms) 200
+[2026-01-06 11:42:06.672] http: GET /uploads/thumbnail_tiffani_xach_11qar_2_6mm_cc5a3db917.jpg?updatedAt=2026-01-06T07:42:04.843Z (7 ms) 200
+[2026-01-06 11:42:06.673] http: GET /uploads/thumbnail_tiffani_xach_11qar_2_6mm_52_52116c4bf3.jpg?updatedAt=2026-01-06T07:42:04.852Z (6 ms) 200
+[2026-01-06 11:42:06.673] http: GET /uploads/thumbnail_1_336ca33004.jpg?updatedAt=2026-01-06T07:42:04.831Z (4 ms) 200
+[2026-01-06 11:42:18.849] http: POST /content-manager/collection-types/api::product.product/actions/publish? (57 ms) 200
+[2026-01-06 11:42:18.858] http: GET /i18n/ai-localization-jobs/collection-types/api::product.product/undefined (5 ms) 200
+[2026-01-06 11:42:18.921] http: GET /content-manager/collection-types/api::product.product/jvox0q1oqcruualezdq6s6hl? (14 ms) 200
+[2026-01-06 11:42:18.992] http: GET /i18n/ai-localization-jobs/collection-types/api::product.product/jvox0q1oqcruualezdq6s6hl (12 ms) 200
+[2026-01-06 11:42:19.000] http: GET /content-manager/preview/url/api::product.product?documentId=jvox0q1oqcruualezdq6s6hl&locale=&status=published (6 ms) 404
+[2026-01-06 11:42:19.008] http: GET /content-manager/relations/api::product.product/category?id=jvox0q1oqcruualezdq6s6hl&pageSize=10&_q=&page=1 (8 ms) 200
+[2026-01-06 11:42:19.016] http: GET /content-manager/relations/api::product.product/jvox0q1oqcruualezdq6s6hl/category?pageSize=5&page=1 (8 ms) 200
+[2026-01-06 11:42:19.017] http: GET /admin/ai-feature-config (24 ms) 200
+[2026-01-06 11:42:19.127] http: GET /content-manager/collection-types/api::product.product/jvox0q1oqcruualezdq6s6hl/actions/countDraftRelations? (14 ms) 200
+[2026-01-06 11:42:19.129] http: GET /admin/ai-feature-config (20 ms) 200
+[2026-01-06 11:42:21.192] http: GET /content-manager/collection-types/api::product.product?page=1&pageSize=10&sort=title_hy%3AASC (27 ms) 200
+[2026-01-06 11:42:21.214] http: GET /admin/ai-feature-config (2 ms) 200
+[2026-01-06 11:42:30.758] http: GET /api/products?populate=* (40 ms) 200
+[2026-01-06 11:43:29.916] http: GET /api/products?populate=* (18 ms) 200
+[2026-01-06 20:20:13.842] http: GET /content-manager/content-types/api::category.category/configuration (60 ms) 401
+[2026-01-06 20:20:13.852] http: GET /content-manager/collection-types/api::category.category?page=1&pageSize=10&sort=name_hy%3AASC (4 ms) 401
+[2026-01-06 20:20:13.869] http: POST /admin/access-token (17 ms) 401
+[2026-01-06 20:20:13.873] http: POST /admin/logout (2 ms) 401
+[2026-01-06 20:20:13.875] http: POST /admin/logout (2 ms) 401
+[2026-01-06 20:20:13.969] http: GET /admin/auth/login (22 ms) 200
+[2026-01-06 20:20:14.323] http: GET /admin/project-type (5 ms) 200
+[2026-01-06 20:20:14.423] http: GET /admin/init (23 ms) 200
+[2026-01-06 20:20:18.249] http: POST /admin/login (122 ms) 200
+[2026-01-06 20:20:18.268] http: GET /admin/users/me (10 ms) 200
+[2026-01-06 20:20:18.286] http: GET /admin/users/me/permissions (18 ms) 200
+[2026-01-06 20:20:18.302] http: GET /admin/telemetry-properties (30 ms) 200
+[2026-01-06 20:20:18.355] http: GET /admin/information (20 ms) 200
+[2026-01-06 20:20:18.410] http: GET /admin/license-limit-information (3 ms) 200
+[2026-01-06 20:20:18.417] http: GET /admin/guided-tour-meta (6 ms) 200
+[2026-01-06 20:20:18.422] http: GET /admin/homepage/layout (5 ms) 200
+[2026-01-06 20:20:18.499] http: GET /content-manager/homepage/recent-documents?action=update (13 ms) 200
+[2026-01-06 20:20:18.512] http: GET /content-manager/homepage/recent-documents?action=publish (13 ms) 200
+[2026-01-06 20:20:18.518] http: GET /content-manager/homepage/count-documents (5 ms) 200
+[2026-01-06 20:20:18.524] http: GET /admin/homepage/key-statistics (5 ms) 200
+[2026-01-06 20:33:51.246] http: GET /api/products?populate=* (34 ms) 200
+[2026-01-06 20:33:51.252] http: GET /api/categories (5 ms) 200
+[2026-01-06 20:33:51.289] http: GET /uploads/tiffani_xach_11qar_2_6mm_51_83bd8aaea1.jpg (3 ms) 200
+[2026-01-06 20:33:57.629] http: GET /api/products?populate=* (26 ms) 200
+[2026-01-06 20:33:57.640] http: GET /api/categories (8 ms) 200
+[2026-01-06 20:34:03.599] http: GET /api/products?populate=* (18 ms) 200
+[2026-01-06 20:34:03.608] http: GET /api/categories (6 ms) 200
+[2026-01-06 20:34:08.910] http: GET /api/products?populate=* (18 ms) 200
+[2026-01-06 20:34:08.918] http: GET /api/categories (6 ms) 200
+[2026-01-06 20:34:11.036] http: GET /api/products?filters[slug][$eq]=ring&populate=* (24 ms) 200
+[2026-01-06 20:34:11.047] http: GET /uploads/tiffani_xach_11qar_2_6mm_cc5a3db917.jpg (2 ms) 200
+[2026-01-06 20:34:11.048] http: GET /uploads/1_336ca33004.jpg (1 ms) 200
+[2026-01-06 20:34:11.048] http: GET /uploads/tiffani_xach_11qar_2_6mm_52_52116c4bf3.jpg (1 ms) 200
+[2026-01-06 21:10:23.902] http: GET /content-manager/init (7 ms) 401
+[2026-01-06 21:10:23.907] http: GET /content-manager/content-types-settings (3 ms) 401
+[2026-01-06 21:10:23.924] http: POST /admin/access-token (16 ms) 200
+[2026-01-06 21:10:23.949] http: GET /content-manager/init (10 ms) 200
+[2026-01-06 21:10:23.967] http: GET /content-manager/content-types-settings (18 ms) 200
+[2026-01-06 21:10:24.053] http: GET /content-manager/init (11 ms) 200
+[2026-01-06 21:10:24.139] http: GET /content-manager/content-types/api::category.category/configuration (23 ms) 200
+[2026-01-06 21:10:24.156] http: GET /content-manager/collection-types/api::category.category?page=1&pageSize=10&sort=name_hy%3AASC (15 ms) 200
+[2026-01-06 21:10:24.247] http: GET /i18n/locales (17 ms) 200
+[2026-01-06 21:10:24.250] http: GET /admin/ai-feature-config (25 ms) 200
+[2026-01-06 21:10:24.959] http: GET /admin/license-limit-information (9 ms) 200
+[2026-01-06 21:12:46.707] http: GET /admin (18 ms) 200
+[2026-01-06 21:12:47.149] http: GET /admin/project-type (9 ms) 200
+[2026-01-06 21:12:47.239] http: GET /admin/init (7 ms) 200
+[2026-01-06 21:12:47.250] http: GET /admin/users/me (11 ms) 200
+[2026-01-06 21:12:47.258] http: GET /admin/users/me/permissions (17 ms) 200
+[2026-01-06 21:12:47.267] http: GET /admin/information (9 ms) 200
+[2026-01-06 21:12:47.268] http: GET /admin/telemetry-properties (9 ms) 200
+[2026-01-06 21:12:47.324] http: GET /admin/license-limit-information (5 ms) 200
+[2026-01-06 21:12:47.332] http: GET /admin/guided-tour-meta (6 ms) 200
+[2026-01-06 21:12:47.337] http: GET /admin/homepage/layout (10 ms) 200
+[2026-01-06 21:12:47.427] http: GET /content-manager/homepage/recent-documents?action=update (30 ms) 200
+[2026-01-06 21:12:47.438] http: GET /content-manager/homepage/recent-documents?action=publish (10 ms) 200
+[2026-01-06 21:12:47.444] http: GET /content-manager/homepage/count-documents (6 ms) 200
+[2026-01-06 21:12:47.449] http: GET /admin/homepage/key-statistics (5 ms) 200
+[2026-01-06 21:16:09.515] http: GET /admin (25 ms) 200
+[2026-01-06 21:16:09.881] http: GET /admin/project-type (3 ms) 200
+[2026-01-06 21:16:09.885] http: GET /favicon.ico (2 ms) 200
+[2026-01-06 21:16:09.990] http: GET /admin/init (22 ms) 200
+[2026-01-06 21:46:54.784] info: File created: /Users/Grigor/Lusi_Jewelry/export_20260106214654.tar.gz
+[2026-01-06 21:46:54.793] info: File changed: /Users/Grigor/Lusi_Jewelry/export_20260106214654.tar.gz
+✔ Cleaning dist dir (21ms)
+[2026-01-06 21:46:54.886] info: File changed: /Users/Grigor/Lusi_Jewelry/export_20260106214654.tar.gz
+[2026-01-06 21:46:55.695] info: Shutting down Strapi
+[2026-01-06 21:46:55.699] info: Strapi has been shut down
+⠹ Loading Strapi[2026-01-06 21:46:56.850] warn: admin.auth.options.expiresIn is deprecated and will be removed in Strapi 6. Please configure admin.auth.sessions.maxRefreshTokenLifespan and admin.auth.sessions.maxSessionLifespan.
+⠋ Building build context
+⠸ Loading Strapi[INFO] Including the following ENV variables as part of the JS bundle:
+    - ADMIN_PATH
+    - STRAPI_ADMIN_BACKEND_URL
+    - STRAPI_TELEMETRY_DISABLED
+    - STRAPI_AI_URL
+    - STRAPI_ANALYTICS_URL
+✔ Building build context (60ms)
+✔ Creating admin (353ms)
+✔ Loading Strapi (837ms)
+✔ Generating types (148ms)
+✔ Cleaning dist dir (3ms)
+✔ Compiling TS (1117ms)
+
+ Project information                                                          
+
+┌────────────────────┬──────────────────────────────────────────────────┐
+│ Time               │ Tue Jan 06 2026 21:46:58 GMT+0400 (Armenia Stan… │
+│ Launched in        │ 2106 ms                                          │
+│ Environment        │ development                                      │
+│ Process PID        │ 67567                                            │
+│ Version            │ 5.33.1 (node v20.19.6)                           │
+│ Edition            │ Community                                        │
+│ Database           │ sqlite                                           │
+│ Database name      │ .tmp/data.db                                     │
+└────────────────────┴──────────────────────────────────────────────────┘
+
+ Actions available                                                            
+
+Welcome back!
+To access the server ⚡️, go to:
+http://localhost:1337
+
+[2026-01-06 21:46:58.587] info: Strapi started successfully
+[2026-01-06 22:00:03.639] http: GET /admin (50 ms) 200
+[2026-01-06 22:00:04.231] http: GET /admin/project-type (7 ms) 200
+[2026-01-06 22:00:04.331] http: GET /admin/init (2 ms) 200
+[2026-01-06 22:00:04.335] http: GET /admin/users/me (3 ms) 401
+[2026-01-06 22:00:04.337] http: GET /admin/users/me/permissions (1 ms) 401
+[2026-01-06 22:00:04.348] http: GET /admin/information (2 ms) 401
+[2026-01-06 22:00:04.349] http: GET /admin/telemetry-properties (1 ms) 401
+[2026-01-06 22:00:04.377] http: POST /admin/access-token (27 ms) 200
+[2026-01-06 22:00:04.394] http: GET /admin/users/me (12 ms) 200
+[2026-01-06 22:00:04.403] http: GET /admin/users/me/permissions (8 ms) 200
+[2026-01-06 22:00:04.409] http: GET /admin/information (14 ms) 200
+[2026-01-06 22:00:04.462] http: GET /admin/license-limit-information (4 ms) 200
+[2026-01-06 22:00:04.473] http: GET /admin/guided-tour-meta (11 ms) 200
+[2026-01-06 22:00:04.477] http: GET /admin/homepage/layout (14 ms) 200
+[2026-01-06 22:00:04.579] http: GET /content-manager/homepage/recent-documents?action=update (28 ms) 200
+[2026-01-06 22:00:04.592] http: GET /content-manager/homepage/recent-documents?action=publish (13 ms) 200
+[2026-01-06 22:00:04.601] http: GET /content-manager/homepage/count-documents (8 ms) 200
+[2026-01-06 22:00:04.607] http: GET /admin/homepage/key-statistics (6 ms) 200
+[2026-01-06 22:00:06.226] http: GET /content-manager/init (9 ms) 200
+[2026-01-06 22:00:06.237] http: GET /content-manager/content-types-settings (11 ms) 200
+[2026-01-06 22:00:06.304] http: GET /content-manager/init (5 ms) 200
+[2026-01-06 22:00:06.366] http: GET /content-manager/content-types/api::category.category/configuration (15 ms) 200
+[2026-01-06 22:00:06.388] http: GET /content-manager/collection-types/api::category.category?page=1&pageSize=10&sort=name_hy%3AASC (21 ms) 200
+[2026-01-06 22:00:06.471] http: GET /i18n/locales (14 ms) 200
+[2026-01-06 22:00:06.473] http: GET /admin/ai-feature-config (20 ms) 200
+[2026-01-06 22:00:09.172] http: GET /upload/settings (24 ms) 200
+[2026-01-06 22:00:09.179] http: GET /upload/configuration (6 ms) 200
+[2026-01-06 22:00:09.225] http: GET /upload/files?sort=createdAt:DESC&page=1&pageSize=10&filters[$and][0][folderPath][$eq]=/ (17 ms) 200
+[2026-01-06 22:00:09.236] http: GET /upload/folders?sort=createdAt:DESC&page=1&pageSize=10&pagination[pageSize]=-1&filters[$and][0][parent][id][$null]=true (7 ms) 200
+[2026-01-06 22:00:09.288] http: GET /uploads/thumbnail_tiffani_xach_11qar_2_6mm_52_52116c4bf3.jpg?updatedAt=2026-01-06T07%3A42%3A04.852Z (6 ms) 200
+[2026-01-06 22:00:09.293] http: GET /uploads/thumbnail_tiffani_xach_11qar_2_6mm_cc5a3db917.jpg?updatedAt=2026-01-06T07%3A42%3A04.843Z (4 ms) 200
+[2026-01-06 22:00:09.295] http: GET /uploads/thumbnail_tiffani_xach_11qar_2_6mm_51_83bd8aaea1.jpg?updatedAt=2026-01-06T07%3A42%3A04.841Z (4 ms) 200
+[2026-01-06 22:00:09.295] http: GET /uploads/thumbnail_1_336ca33004.jpg?updatedAt=2026-01-06T07%3A42%3A04.831Z (1 ms) 200
+[2026-01-06 22:00:09.311] http: GET /upload/settings (5 ms) 200
+[2026-01-06 22:00:10.958] http: GET /content-manager/init (18 ms) 200
+[2026-01-06 22:00:11.038] http: GET /admin/ai-feature-config (8 ms) 200
+[2026-01-06 22:00:12.835] http: GET /content-manager/content-types/api::product.product/configuration (20 ms) 200
+[2026-01-06 22:00:12.852] http: GET /content-manager/collection-types/api::product.product?page=1&pageSize=10&sort=title_hy%3AASC (17 ms) 200
+[2026-01-06 22:00:12.879] http: GET /admin/ai-feature-config (4 ms) 200
+[2026-01-06 22:00:14.647] http: GET /admin/ai-feature-config (13 ms) 200
+[2026-01-06 22:01:48.601] http: GET /content-manager/content-types/api::category.category/configuration (35 ms) 200
+[2026-01-06 22:01:48.623] http: GET /content-manager/collection-types/api::category.category?page=1&pageSize=10&sort=name_hy%3AASC (21 ms) 200
+[2026-01-06 22:01:48.666] http: GET /admin/ai-feature-config (6 ms) 200
+[2026-01-06 22:01:52.143] http: GET /i18n/settings (25 ms) 200
+[2026-01-06 22:01:52.154] http: GET /i18n/ai-localization-jobs/collection-types/api::category.category/undefined (10 ms) 200
+[2026-01-06 22:01:52.172] http: POST /content-manager/uid/generate? (15 ms) 200
+[2026-01-06 22:01:52.186] http: GET /content-manager/relations/api::category.category/products?id=&pageSize=10&_q=&page=1 (13 ms) 200
+[2026-01-06 22:01:52.188] http: GET /admin/ai-feature-config (32 ms) 200
+[2026-01-06 22:01:52.652] http: POST /content-manager/uid/check-availability? (26 ms) 200
+[2026-01-06 22:01:58.705] http: GET /content-type-builder/schema (7 ms) 200
+[2026-01-06 22:01:58.710] http: GET /content-type-builder/reserved-names (5 ms) 200
+[2026-01-06 22:01:58.714] http: GET /admin/ai-usage (17 ms) 200
+[2026-01-06 22:01:58.716] http: GET /admin/ai-token (6 ms) 200
+[2026-01-06 22:01:58.731] http: GET /admin/ai-token (2 ms) 200
+[2026-01-06 22:05:25.936] http: GET /content-manager/init (20 ms) 200
+[2026-01-06 22:05:25.959] http: GET /content-manager/content-types-settings (20 ms) 200
+[2026-01-06 22:05:26.035] http: GET /content-manager/content-types/api::category.category/configuration (14 ms) 200
+[2026-01-06 22:05:26.053] http: GET /content-manager/collection-types/api::category.category?page=1&pageSize=10&sort=name_hy%3AASC (18 ms) 200
+[2026-01-06 22:05:26.141] http: GET /i18n/locales (13 ms) 200
+[2026-01-06 22:05:26.143] http: GET /admin/ai-feature-config (20 ms) 200
+[2026-01-06 22:05:27.886] http: GET /i18n/settings (20 ms) 200
+[2026-01-06 22:05:27.895] http: GET /i18n/ai-localization-jobs/collection-types/api::category.category/undefined (8 ms) 200
+[2026-01-06 22:05:27.904] http: POST /content-manager/uid/generate? (7 ms) 200
+[2026-01-06 22:05:27.913] http: GET /content-manager/relations/api::category.category/products?id=&pageSize=10&_q=&page=1 (8 ms) 200
+[2026-01-06 22:05:27.914] http: GET /admin/ai-feature-config (19 ms) 200
+[2026-01-06 22:05:28.318] http: POST /content-manager/uid/check-availability? (27 ms) 200
+[2026-01-06 22:05:32.198] http: GET /content-type-builder/schema (19 ms) 200
+[2026-01-06 22:05:32.205] http: GET /content-type-builder/reserved-names (6 ms) 200
+[2026-01-06 22:05:32.209] http: GET /admin/ai-token (3 ms) 200
+[2026-01-06 22:05:32.210] http: GET /admin/ai-usage (34 ms) 200
+[2026-01-06 22:05:32.220] http: GET /admin/ai-token (2 ms) 200
+[2026-01-08 20:18:25.520] http: GET / (42 ms) 302
+[2026-01-08 20:18:25.552] http: GET /admin (24 ms) 200
+[2026-01-08 20:18:26.012] http: GET /admin/project-type (2 ms) 200
+[2026-01-08 20:18:26.104] http: GET /admin/init (13 ms) 200
+^[

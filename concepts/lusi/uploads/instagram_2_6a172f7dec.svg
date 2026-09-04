@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+<rect width="800" height="800" fill="#f5f1ea"/>
+<circle cx="400" cy="340" r="120" fill="none" stroke="#c9a86a" stroke-width="6"/>
+<circle cx="400" cy="200" r="26" fill="#c9a86a"/>
+<text x="400" y="580" font-family="Georgia, serif" font-size="34" fill="#8a7a5c" text-anchor="middle">Workshop Moments</text>
+<text x="400" y="640" font-family="Georgia, serif" font-size="20" fill="#b7a98c" text-anchor="middle" letter-spacing="6">LUSI JEWELRY</text>
+</svg>

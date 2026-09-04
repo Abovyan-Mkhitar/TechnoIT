@@ -64,7 +64,7 @@
 body {
   font-family: var(--font-default);
   color: var(--text-color);
-  background: var(--theme-color);
+  background: var(--theme-color-dark);
   transition: 0.5s background ease;
 }
 
@@ -1045,7 +1045,6 @@ section {background: var(--light-color);}
   border-radius: 0px;
   overflow: hidden;
   position: relative;
-  background-attachment: fixed;
 }
 
 .call-to-action h3 {
@@ -1517,11 +1516,6 @@ section {background: var(--light-color);}
 .hero .circle{
   color: var(--color-primary);
 }
-@media (min-width: 1365px) {
-  .hero {
-    background-attachment: fixed;
-  }
-}
 
 .dark-bg{
   padding: 50px 30px;
@@ -1625,7 +1619,7 @@ section {background: var(--light-color);}
     font-size: 22px;
   }
   .call-to-action {
-    background: url(../images/cta-bg.jpg) center left;
+    background: url(../images/hero-bg.png) center left;
       background-size: cover;
       padding: 150px 60px;
       border-radius: 0px;
@@ -3332,7 +3326,6 @@ canvas{
   padding: 60px 0;
   border-radius: 0px;
   position: relative;
-  background-attachment: fixed;
 }
 .footer-section:before {
   content: "";
@@ -3354,6 +3347,10 @@ canvas{
 
 .copyright-text{
   margin-top: 30px;
+}
+
+.copyright-text p {
+  color: var(--text-white-color);
 }
 
 .single-cta i {

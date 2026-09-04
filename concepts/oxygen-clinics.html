@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<title>Oxygen Clinics — Homepage Concept by Developers Bloom</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://developersbloom.com/website-development.html">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  :root{
+    --ground:#F4F6F3;
+    --ground-raise:#EAEEE8;
+    --ink:#1B2620;
+    --ink-soft:#4B5A50;
+    --pine:#1F4D3A;
+    --pine-strong:#153629;
+    --sage:#8FAE93;
+    --flush:#C97C6D;
+    --flush-strong:#B3614F;
+    --mist:#DCE4DD;
+    --line:rgba(27,38,32,0.14);
+    --card:#FFFFFF;
+    --on-pine:#F4F6F3;
+    --shadow:0 1px 2px rgba(27,38,32,0.04), 0 12px 32px -16px rgba(27,38,32,0.18);
+    --serif:Charter,"Bitstream Charter","Sitka Text",Cambria,"Iowan Old Style",Georgia,serif;
+    --sans:"Avenir Next","Avenir",Optima,"Segoe UI","Noto Sans",sans-serif;
+    --mono:"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --ground:#10160F;
+      --ground-raise:#171F17;
+      --ink:#EAF0EB;
+      --ink-soft:#B7C4BA;
+      --pine:#6FBE99;
+      --pine-strong:#8FD4AF;
+      --sage:#7C9C82;
+      --flush:#E0947F;
+      --flush-strong:#EAAA97;
+      --mist:#212B21;
+      --line:rgba(234,240,235,0.14);
+      --card:#151C15;
+      --on-pine:#0E1712;
+      --shadow:0 1px 2px rgba(0,0,0,0.3), 0 20px 40px -20px rgba(0,0,0,0.6);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#10160F; --ground-raise:#171F17; --ink:#EAF0EB; --ink-soft:#B7C4BA;
+    --pine:#6FBE99; --pine-strong:#8FD4AF; --sage:#7C9C82; --flush:#E0947F; --flush-strong:#EAAA97;
+    --mist:#212B21; --line:rgba(234,240,235,0.14); --card:#151C15; --on-pine:#0E1712;
+    --shadow:0 1px 2px rgba(0,0,0,0.3), 0 20px 40px -20px rgba(0,0,0,0.6);
+    color-scheme: dark;
+  }
+  :root[data-theme="light"]{
+    --ground:#F4F6F3; --ground-raise:#EAEEE8; --ink:#1B2620; --ink-soft:#4B5A50;
+    --pine:#1F4D3A; --pine-strong:#153629; --sage:#8FAE93; --flush:#C97C6D; --flush-strong:#B3614F;
+    --mist:#DCE4DD; --line:rgba(27,38,32,0.14); --card:#FFFFFF; --on-pine:#F4F6F3;
+    --shadow:0 1px 2px rgba(27,38,32,0.04), 0 12px 32px -16px rgba(27,38,32,0.18);
+    color-scheme: light;
+  }
+
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    background:var(--ground);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{ display:block; max-width:100%; }
+  a{ color:inherit; }
+  h1,h2,h3,h4{ font-family:var(--serif); font-weight:600; margin:0; text-wrap:balance; letter-spacing:-0.01em; }
+  p{ margin:0; }
+  .container{ max-width:1180px; margin:0 auto; padding:0 24px; }
+  .eyebrow{
+    font-family:var(--mono); text-transform:uppercase; letter-spacing:0.14em;
+    font-size:12px; color:var(--pine); display:flex; align-items:center; gap:10px;
+  }
+  ::selection{ background:var(--flush); color:#fff; }
+  :focus-visible{ outline:2px solid var(--flush); outline-offset:3px; border-radius:2px; }
+
+  /* ---------- O2 molecule motif ---------- */
+  .o2{ display:inline-flex; align-items:center; gap:2px; flex-shrink:0; }
+  .o2 svg{ display:block; }
+
+
+  /* ---------- nav ---------- */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:var(--ground);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{ display:flex; align-items:center; justify-content:space-between; height:76px; gap:24px; }
+  .logo{ display:flex; align-items:center; gap:10px; font-family:var(--serif); font-weight:600; font-size:20px; letter-spacing:0.02em; text-decoration:none; }
+  .logo .leaf{ color:var(--pine); }
+  .logo small{ display:block; font-family:var(--mono); font-size:9px; letter-spacing:0.16em; text-transform:uppercase; color:var(--ink-soft); font-weight:400; margin-top:1px; }
+  nav.links{ display:flex; align-items:center; gap:30px; font-size:14.5px; }
+  nav.links a{ text-decoration:none; color:var(--ink-soft); position:relative; padding:4px 0; }
+  nav.links a:hover{ color:var(--ink); }
+  nav.links a::after{
+    content:""; position:absolute; left:0; right:0; bottom:-2px; height:1px; background:var(--pine);
+    transform:scaleX(0); transform-origin:left; transition:transform .25s ease;
+  }
+  nav.links a:hover::after{ transform:scaleX(1); }
+  .nav-right{ display:flex; align-items:center; gap:18px; }
+  .tel{ font-family:var(--mono); font-size:13.5px; font-variant-numeric:tabular-nums; color:var(--ink-soft); display:none; }
+  .btn{
+    font-family:var(--sans); font-size:14.5px; font-weight:600; text-decoration:none;
+    padding:11px 22px; border-radius:3px; display:inline-flex; align-items:center; gap:8px;
+    cursor:pointer; border:1px solid transparent; transition:transform .2s ease, background .2s ease, border-color .2s ease, color .2s ease;
+  }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn-primary{ background:var(--pine); color:#F4F6F3; }
+  .btn-primary:hover{ background:var(--pine-strong); }
+  .btn-ghost{ background:transparent; color:var(--ink); border-color:var(--line); }
+  .btn-ghost:hover{ border-color:var(--pine); }
+  .menu-toggle{ display:none; background:none; border:none; cursor:pointer; padding:6px; color:var(--ink); }
+
+  /* ---------- hero ---------- */
+  .hero{ position:relative; overflow:hidden; padding:96px 0 110px; }
+  .hero-atmos{ position:absolute; inset:0; z-index:0; pointer-events:none; }
+  .orb{ position:absolute; border-radius:50%; filter:blur(60px); opacity:0.45; }
+  .orb.a{ width:420px; height:420px; background:radial-gradient(circle at 30% 30%, var(--sage), transparent 70%); top:-120px; right:-60px; }
+  .orb.b{ width:320px; height:320px; background:radial-gradient(circle at 60% 40%, var(--flush), transparent 70%); bottom:-100px; right:220px; }
+  .molecule-bg{ position:absolute; right:-40px; top:40px; opacity:0.5; }
+  .hero-inner{ position:relative; z-index:1; display:grid; grid-template-columns:1.15fr 0.85fr; gap:60px; align-items:end; }
+  .hero-copy .eyebrow{ margin-bottom:22px; }
+  .hero-copy h1{ font-size:clamp(40px,5.4vw,68px); line-height:1.04; }
+  .hero-copy h1 em{ font-style:italic; color:var(--pine); }
+  .hero-copy p.lede{ font-size:18px; color:var(--ink-soft); max-width:46ch; margin-top:22px; }
+  .hero-actions{ display:flex; gap:14px; margin-top:36px; flex-wrap:wrap; }
+  .hero-aside{ border-left:1px solid var(--line); padding-left:28px; }
+  .hero-aside .quote{ font-family:var(--serif); font-style:italic; font-size:19px; line-height:1.5; color:var(--ink); }
+  .hero-aside .attrib{ margin-top:14px; font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--ink-soft); }
+
+  /* ---------- credentials strip ---------- */
+  .creds{ border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--ground-raise); }
+  .creds-row{ display:grid; grid-template-columns:repeat(4,1fr); }
+  .cred{ padding:26px 24px; display:flex; align-items:center; gap:12px; border-right:1px solid var(--line); }
+  .cred:last-child{ border-right:none; }
+  .cred .num{ font-family:var(--mono); font-size:13px; color:var(--pine); }
+  .cred .label{ font-size:13.5px; color:var(--ink-soft); line-height:1.35; }
+  .cred strong{ color:var(--ink); font-weight:600; }
+
+  /* ---------- section shell ---------- */
+  section{ padding:104px 0; }
+  .section-head{ display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:end; margin-bottom:56px; }
+  .section-head h2{ font-size:clamp(30px,3.4vw,42px); line-height:1.1; }
+  .section-head .desc{ color:var(--ink-soft); font-size:16.5px; max-width:50ch; }
+  .section-head .eyebrow{ margin-bottom:14px; }
+
+  /* ---------- philosophy ---------- */
+  .philosophy{ background:var(--pine); color:var(--on-pine); }
+  .philosophy-inner{ display:grid; grid-template-columns:auto 1fr; gap:36px; align-items:start; }
+  .philosophy blockquote{ margin:0; font-family:var(--serif); font-style:italic; font-size:clamp(24px,3vw,34px); line-height:1.4; text-wrap:balance; }
+  .philosophy .cite{ margin-top:26px; font-family:var(--mono); font-size:13px; text-transform:uppercase; letter-spacing:0.1em; opacity:0.8; }
+
+  /* ---------- treatments ---------- */
+  .grid-5{ display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+  .tcard{ background:var(--card); padding:32px 26px; display:flex; flex-direction:column; gap:16px; transition:background .25s ease; }
+  .tcard:hover{ background:var(--mist); }
+  .tcard .icon{ color:var(--pine); }
+  .tcard h3{ font-size:18px; }
+  .tcard ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; font-size:13.5px; color:var(--ink-soft); }
+  .tcard li{ display:flex; gap:8px; align-items:flex-start; }
+  .tcard li .o2{ margin-top:5px; }
+  .tcard .tag{ margin-top:auto; font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--flush-strong); }
+
+  /* ---------- diagnostics ---------- */
+  .diagnostics-panel{ background:var(--ink); color:var(--ground); border-radius:10px; padding:56px 60px; }
+  .diagnostics-inner{ display:grid; grid-template-columns:1fr 1fr; gap:56px; }
+  .diagnostics-panel h2{ color:var(--ground); }
+  .diagnostics-panel .desc{ color:color-mix(in srgb, var(--ground) 70%, transparent); }
+  .scan-list{ font-family:var(--mono); font-size:14px; display:grid; grid-template-columns:1fr 1fr; gap:12px 24px; }
+  .scan-list .row{ display:flex; justify-content:space-between; border-bottom:1px dashed rgba(244,246,243,0.2); padding-bottom:10px; gap:10px; }
+  .scan-list .row span:last-child{ color:var(--sage); }
+
+  /* ---------- specialists ---------- */
+  .spec-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:22px; }
+  .spec{ text-align:left; }
+  .badge{
+    width:64px; height:64px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    font-family:var(--serif); font-size:20px; font-weight:600; color:#F4F6F3;
+    margin-bottom:16px;
+  }
+  .spec h4{ font-size:16px; font-family:var(--sans); font-weight:700; }
+  .spec .role{ font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--pine); margin:4px 0 10px; }
+  .spec p{ font-size:13.5px; color:var(--ink-soft); line-height:1.5; }
+
+  /* ---------- testimonials ---------- */
+  .tmn-grid{ columns:3; column-gap:22px; }
+  .tmn{ break-inside:avoid; background:var(--card); border:1px solid var(--line); border-radius:4px; padding:26px; margin-bottom:22px; box-shadow:var(--shadow); }
+  .tmn p.quote{ font-size:15px; line-height:1.55; }
+  .tmn .who{ margin-top:16px; display:flex; align-items:center; gap:10px; font-size:13px; color:var(--ink-soft); }
+  .tmn .who strong{ color:var(--ink); font-weight:600; }
+
+  /* ---------- locations / contact ---------- */
+  .locations-inner{ display:grid; grid-template-columns:1fr 1fr 1.1fr; gap:1px; background:var(--line); border:1px solid var(--line); }
+  .loc-card{ background:var(--card); padding:34px 30px; }
+  .loc-card h3{ font-size:19px; margin-bottom:16px; }
+  .loc-line{ display:flex; gap:10px; font-size:14.5px; color:var(--ink-soft); margin-bottom:10px; align-items:flex-start; }
+  .loc-line strong{ color:var(--ink); font-weight:600; }
+  .loc-line.tel{ font-family:var(--mono); font-variant-numeric:tabular-nums; display:flex; }
+
+  form.book{ display:flex; flex-direction:column; gap:16px; }
+  .field{ display:flex; flex-direction:column; gap:6px; }
+  .field label{ font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--ink-soft); }
+  .field input, .field select, .field textarea{
+    font-family:var(--sans); font-size:15px; padding:11px 12px; border-radius:3px;
+    border:1px solid var(--line); background:var(--ground); color:var(--ink);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{ border-color:var(--pine); }
+  .form-note{ font-size:12.5px; color:var(--ink-soft); margin-top:2px; }
+  .form-status{ font-size:13.5px; font-family:var(--mono); color:var(--pine); min-height:18px; }
+
+  /* ---------- footer ---------- */
+  footer{ border-top:1px solid var(--line); padding:56px 0 34px; }
+  .foot-inner{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:36px; }
+  .foot-col h5{ font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--ink-soft); margin-bottom:14px; }
+  .foot-col ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:9px; font-size:14px; }
+  .foot-col a{ text-decoration:none; color:var(--ink-soft); }
+  .foot-col a:hover{ color:var(--ink); }
+  .foot-bottom{ margin-top:48px; padding-top:24px; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-size:12.5px; color:var(--ink-soft); }
+  .concept-tag{
+    font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:0.08em;
+    color:var(--flush-strong); border:1px solid var(--line); padding:4px 10px; border-radius:20px;
+  }
+
+  /* ---------- responsive ---------- */
+  @media (min-width:900px){ .tel{ display:block; } }
+  @media (max-width:980px){
+    .hero-inner{ grid-template-columns:1fr; }
+    .hero-aside{ border-left:none; padding-left:0; border-top:1px solid var(--line); padding-top:24px; }
+    .creds-row{ grid-template-columns:repeat(2,1fr); }
+    .cred:nth-child(2){ border-right:none; }
+    .grid-5{ grid-template-columns:repeat(2,1fr); }
+    .diagnostics-inner{ grid-template-columns:1fr; }
+    .spec-grid{ grid-template-columns:repeat(2,1fr); }
+    .tmn-grid{ columns:2; }
+    .locations-inner{ grid-template-columns:1fr; }
+    .foot-inner{ grid-template-columns:1fr 1fr; }
+    .section-head{ grid-template-columns:1fr; }
+  }
+  @media (max-width:640px){
+    nav.links{ display:none; }
+    .menu-toggle{ display:block; }
+    section{ padding:64px 0; }
+    .creds-row{ grid-template-columns:1fr; }
+    .cred{ border-right:none; border-bottom:1px solid var(--line); }
+    .grid-5{ grid-template-columns:1fr; }
+    .spec-grid{ grid-template-columns:1fr 1fr; }
+    .tmn-grid{ columns:1; }
+    .philosophy-inner{ grid-template-columns:1fr; }
+    .foot-inner{ grid-template-columns:1fr; }
+    .diagnostics-panel{ padding:36px 24px; }
+  }
+  .db-bar{
+    background:var(--pine); color:var(--on-pine);
+    font-family:var(--sans); font-size:0.85rem;
+    text-align:center; padding:10px 16px;
+  }
+  .db-bar a{ color:inherit; text-decoration:underline; font-weight:600; }
+</style>
+
+<div class="db-bar">Concept homepage by Developers Bloom — not affiliated with or endorsed by Oxygen Aesthetic &amp; Medical Center. <a href="/website-development.html">Back to Developers Bloom</a></div>
+
+<header class="nav">
+  <div class="container nav-row">
+    <a class="logo" href="#top" aria-label="Oxygen home">
+      <span class="leaf" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21C7 21 4 17.5 4 12.5 4 7 8 3 15 3c0 8-3 12-3 18Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M9 15c2-3 3-6 6-9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      </span>
+      <span>OXYGEN<small>Aesthetic &amp; Medical Center</small></span>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="#treatments">Treatments</a>
+      <a href="#diagnostics">Diagnostics</a>
+      <a href="#specialists">Specialists</a>
+      <a href="#results">Results</a>
+      <a href="#locations">Locations</a>
+    </nav>
+    <div class="nav-right">
+      <span class="tel">+374&nbsp;10&nbsp;500&nbsp;267</span>
+      <a class="btn btn-primary" href="#book">Book a consultation</a>
+      <button class="menu-toggle" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-atmos" aria-hidden="true">
+      <div class="orb a"></div>
+      <div class="orb b"></div>
+      <svg class="molecule-bg" width="260" height="260" viewBox="0 0 260 260" fill="none">
+        <circle cx="90" cy="130" r="46" stroke="currentColor" stroke-width="1" opacity="0.35" style="color:var(--pine)"/>
+        <circle cx="176" cy="130" r="46" stroke="currentColor" stroke-width="1" opacity="0.35" style="color:var(--pine)"/>
+        <line x1="132" y1="130" x2="138" y2="130" stroke="currentColor" stroke-width="1" opacity="0.35" style="color:var(--pine)"/>
+      </svg>
+    </div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="o2">
+          <svg width="14" height="8" viewBox="0 0 14 8"><circle cx="4" cy="4" r="3.3" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="10" cy="4" r="3.3" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+        </span>Licensed · RA Ministry of Health · Yerevan</div>
+        <h1>The air clears.<br>So does <em>everything else</em>.</h1>
+        <p class="lede">Oxygen is an aesthetic and medical center built around one idea: beauty isn't manufactured, it's revealed. Injectables, skin therapy, hair removal and in-house diagnostic ultrasound — under one licensed roof, since 2015.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#book">Book a consultation</a>
+          <a class="btn btn-ghost" href="#treatments">View treatments</a>
+        </div>
+      </div>
+      <div class="hero-aside">
+        <p class="quote">"Our expertise is devoted to revealing your inner beauty and potential — highlighting your natural features while ensuring a flawless result."</p>
+        <p class="attrib">— Oxygen, mission statement</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <div class="creds">
+    <div class="container creds-row">
+      <div class="cred"><span class="num">01</span><span class="label"><strong>Licensed</strong> by the RA Ministry of Health</span></div>
+      <div class="cred"><span class="num">02</span><span class="label">Operating since <strong>2015</strong></span></div>
+      <div class="cred"><span class="num">03</span><span class="label"><strong>Premium Award</strong> 2019, service quality</span></div>
+      <div class="cred"><span class="num">04</span><span class="label"><strong>2 clinics</strong> — Amiryan St. &amp; Sayat-Nova</span></div>
+    </div>
+  </div>
+
+  <!-- PHILOSOPHY -->
+  <section class="philosophy">
+    <div class="container philosophy-inner">
+      <span class="o2" aria-hidden="true">
+        <svg width="34" height="20" viewBox="0 0 34 20"><circle cx="10" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="24" cy="10" r="8.5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+      </span>
+      <div>
+        <blockquote>Gełec'kacnelə mer masnagitowt'yownn ē — "Beautifying is our profession." Every procedure here starts from what's already there: your own features, brought back into focus.</blockquote>
+        <p class="cite">Founding principle, translated from the clinic's Armenian tagline</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TREATMENTS -->
+  <section id="treatments">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Services</div>
+          <h2>Five disciplines, one center</h2>
+        </div>
+        <p class="desc">From injectables to in-house diagnostics, treatments are grouped the way a specialist would think about them — not the way a template would.</p>
+      </div>
+
+      <div class="grid-5">
+        <div class="tcard">
+          <span class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M14 4l6 6-8.5 8.5a3 3 0 01-4.24 0v0a3 3 0 010-4.24L16 5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 20l2.5-2.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></span>
+          <h3>Medical Cosmetology</h3>
+          <ul>
+            <li><span class="o2"><svg width="9" height="6"><circle cx="2" cy="3" r="1.6" fill="none" stroke="currentColor"/><circle cx="7" cy="3" r="1.6" fill="none" stroke="currentColor"/></svg></span>Lip volume augmentation</li>
+            <li><span class="o2"><svg width="9" height="6"><circle cx="2" cy="3" r="1.6" fill="none" stroke="currentColor"/><circle cx="7" cy="3" r="1.6" fill="none" stroke="currentColor"/></svg></span>Botulinum therapy</li>
+            <li><span class="o2"><svg width="9" height="6"><circle cx="2" cy="3" r="1.6" fill="none" stroke="currentColor"/><circle cx="7" cy="3" r="1.6" fill="none" stroke="currentColor"/></svg></span>Contour plastic / fillers</li>
+            <li><span class="o2"><svg width="9" height="6"><circle cx="2" cy="3" r="1.6" fill="none" stroke="currentColor"/><circle cx="7" cy="3" r="1.6" fill="none" stroke="currentColor"/></svg></span>Plasmolifting &amp; plasma-filler</li>
+            <li><span class="o2"><svg width="9" height="6"><circle cx="2" cy="3" r="1.6" fill="none" stroke="currentColor"/><circle cx="7" cy="3" r="1.6" fill="none" stroke="currentColor"/></svg></span>Biorevitalization &amp; mesotherapy</li>
+          </ul>
+          <span class="tag">Injectables</span>
+        </div>
+
+        <div class="tcard">
+          <span class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3c3 3 6 6.5 6 10.5A6 6 0 016 13.5C6 9.5 9 6 12 3Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+          <h3>Aesthetic Cosmetology</h3>
+          <ul>
+            <li><span class="o2"><svg width="9" height="6"><circle cx="2" cy="3" r="1.6" fill="none" stroke="currentColor"/><circle cx="7" cy="3" r="1.6" fill="none" stroke="currentColor"/></svg></span>LED therapy &amp; peels</li>
+            <li><span class="o2"><svg width="9" height="6"><circle cx="2" cy="3" r="1.6" fill="none" stroke="currentColor"/><circle cx="7" cy="3" r="1.6" fill="none" stroke="currentColor"/></svg></span>Carbon peeling / dermabrasion</li>
+            <li><span class="o2"><svg width="9" height="6"><circle cx="2" cy="3" r="1.6" fill="none" stroke="currentColor"/><circle cx="7" cy="3" r="1.6" fill="none" stroke="currentColor"/></svg></span>Ultrasonic deep cleansing</li>
+            <li><span class="o2"><svg width="9" height="6"><circle cx="2" cy="3" r="1.6" fill="none" stroke="currentColor"/><circle cx="7" cy="3" r="1.6" fill="none" stroke="currentColor"/></svg></span>Age-specific skin programs</li>
+            <li><span class="o2"><svg width="9" height="6"><circle cx="2" cy="3" r="1.6" fill="none" stroke="currentColor"/><circle cx="7" cy="3" r="1.6" fill="none" stroke="currentColor"/></svg></span>Cryo-massage, liquid nitrogen</li>
+          </ul>
+          <span class="tag">Skin</span>
+        </div>
+
+        <div class="tcard">
+          <span class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M5 19L19 5M9 5h10v10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Hair Removal</h3>
+          <ul>
+            <li><span class="o2"><svg width="9" height="6"><circle cx="2" cy="3" r="1.6" fill="none" stroke="currentColor"/><circle cx="7" cy="3" r="1.6" fill="none" stroke="currentColor"/></svg></span>Full-body programs</li>
+            <li><span class="o2"><svg width="9" height="6"><circle cx="2" cy="3" r="1.6" fill="none" stroke="currentColor"/><circle cx="7" cy="3" r="1.6" fill="none" stroke="currentColor"/></svg></span>Face &amp; precision areas</li>
+            <li><span class="o2"><svg width="9" height="6"><circle cx="2" cy="3" r="1.6" fill="none" stroke="currentColor"/><circle cx="7" cy="3" r="1.6" fill="none" stroke="currentColor"/></svg></span>Men's &amp; women's protocols</li>
+          </ul>
+          <span class="tag">Most-booked</span>
+        </div>
+
+        <div class="tcard">
+          <span class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 12h4l2-7 4 14 2-9 2 4h4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Ultrasound Diagnostics</h3>
+          <ul>
+            <li><span class="o2"><svg width="9" height="6"><circle cx="2" cy="3" r="1.6" fill="none" stroke="currentColor"/><circle cx="7" cy="3" r="1.6" fill="none" stroke="currentColor"/></svg></span>Abdominal &amp; thyroid</li>
+            <li><span class="o2"><svg width="9" height="6"><circle cx="2" cy="3" r="1.6" fill="none" stroke="currentColor"/><circle cx="7" cy="3" r="1.6" fill="none" stroke="currentColor"/></svg></span>Vascular doppler-duplex</li>
+            <li><span class="o2"><svg width="9" height="6"><circle cx="2" cy="3" r="1.6" fill="none" stroke="currentColor"/><circle cx="7" cy="3" r="1.6" fill="none" stroke="currentColor"/></svg></span>Soft tissue &amp; lymph nodes</li>
+          </ul>
+          <span class="tag">In-house</span>
+        </div>
+
+        <div class="tcard">
+          <span class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3l9 4.5-9 4.5-9-4.5L12 3Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M6 10v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5" stroke="currentColor" stroke-width="1.3"/></svg></span>
+          <h3>Academy</h3>
+          <ul>
+            <li><span class="o2"><svg width="9" height="6"><circle cx="2" cy="3" r="1.6" fill="none" stroke="currentColor"/><circle cx="7" cy="3" r="1.6" fill="none" stroke="currentColor"/></svg></span>Professional certification</li>
+            <li><span class="o2"><svg width="9" height="6"><circle cx="2" cy="3" r="1.6" fill="none" stroke="currentColor"/><circle cx="7" cy="3" r="1.6" fill="none" stroke="currentColor"/></svg></span>Injectable technique courses</li>
+            <li><span class="o2"><svg width="9" height="6"><circle cx="2" cy="3" r="1.6" fill="none" stroke="currentColor"/><circle cx="7" cy="3" r="1.6" fill="none" stroke="currentColor"/></svg></span>Hands-on cohorts</li>
+          </ul>
+          <span class="tag">Training</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIAGNOSTICS SPOTLIGHT -->
+  <section id="diagnostics">
+    <div class="container">
+      <div class="diagnostics-panel diagnostics-inner">
+        <div>
+          <div class="eyebrow" style="color:var(--sage)">The differentiator</div>
+          <h2>Most aesthetic clinics guess. This one scans first.</h2>
+          <p class="desc" style="margin-top:18px">Oxygen runs full diagnostic ultrasound in-house — the kind of equipment usually found in a hospital radiology department, not a beauty clinic. It's a quieter story than the injectables, but it's the one that actually earns trust with a skeptical client.</p>
+        </div>
+        <div class="scan-list">
+          <div class="row"><span>Abdominal cavity</span><span>ready</span></div>
+          <div class="row"><span>Thyroid gland</span><span>ready</span></div>
+          <div class="row"><span>Prostate</span><span>ready</span></div>
+          <div class="row"><span>Testicles</span><span>ready</span></div>
+          <div class="row"><span>Lymph nodes</span><span>ready</span></div>
+          <div class="row"><span>Soft tissue</span><span>ready</span></div>
+          <div class="row"><span>Vascular doppler / duplex / triplex</span><span>ready</span></div>
+          <div class="row"><span>Head &amp; neck major vessels</span><span>ready</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIALISTS -->
+  <section id="specialists">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">By name, not by chance</div>
+          <h2>Clients don't ask for "a specialist." They ask for Ani.</h2>
+        </div>
+        <p class="desc">Every quote below is unprompted — pulled from real client reviews that name a specific person. That's a stronger trust signal than a stock "our team" photo grid.</p>
+      </div>
+      <div class="spec-grid">
+        <div class="spec">
+          <div class="badge" style="background:var(--pine)">AG</div>
+          <h4>Ani Gharibyan</h4>
+          <div class="role">Client care</div>
+          <p>Named by multiple clients for warm, fast, high-caliber service from first contact.</p>
+        </div>
+        <div class="spec">
+          <div class="badge" style="background:var(--flush)">A</div>
+          <h4>Aghunik</h4>
+          <div class="role">Aesthetic cosmetology</div>
+          <p>Praised repeatedly for handling difficult, reactive skin with a careful, attentive approach.</p>
+        </div>
+        <div class="spec">
+          <div class="badge" style="background:var(--sage)">S</div>
+          <h4>Stella</h4>
+          <div class="role">Skin specialist</div>
+          <p>"Finally found solutions for my complicated skin" — a recurring theme in her reviews.</p>
+        </div>
+        <div class="spec">
+          <div class="badge" style="background:var(--pine-strong)">A</div>
+          <h4>Arevik</h4>
+          <div class="role">Hair removal &amp; skin care</div>
+          <p>Clients specifically request her for precision work and clear aftercare guidance.</p>
+        </div>
+        <div class="spec">
+          <div class="badge" style="background:var(--flush-strong)">A</div>
+          <h4>Arshaluys</h4>
+          <div class="role">Sayat-Nova branch</div>
+          <p>The named specialist clients thank most often at the Sayat-Nova location.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="results">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Results, in their words</div>
+          <h2>What the reviews already say</h2>
+        </div>
+        <p class="desc">Translated and lightly trimmed from real client testimonials on file.</p>
+      </div>
+      <div class="tmn-grid">
+        <div class="tmn">
+          <p class="quote">"Thank you Oxygen for the pleasant, beautiful environment — and special thanks to Ani Gharibyan for warm, professional, fast, high-caliber service."</p>
+          <div class="who"><strong>Jemma S.</strong> · client</div>
+        </div>
+        <div class="tmn">
+          <p class="quote">"Best aesthetic and medical center — I recommend it without hesitation."</p>
+          <div class="who"><strong>Amalya M.</strong> · client</div>
+        </div>
+        <div class="tmn">
+          <p class="quote">"I searched a long time for the ideal hair-removal center, one that would satisfy me on both quality and service. I finally found Oxygen."</p>
+          <div class="who"><strong>Eleonora E.</strong> · client</div>
+        </div>
+        <div class="tmn">
+          <p class="quote">"Finally found the best specialist for me, Stella — incredibly hospitable, caring and professional. She really found solutions for my complicated skin."</p>
+          <div class="who"><strong>Astgh Y.</strong> · client</div>
+        </div>
+        <div class="tmn">
+          <p class="quote">"Warm atmosphere, high-caliber service, professional and attentive staff every visit."</p>
+          <div class="who"><strong>Anahit T.</strong> · client</div>
+        </div>
+        <div class="tmn">
+          <p class="quote">"Grateful for the caring, warm, high-caliber service — special thanks to specialist Arshaluys at the Sayat-Nova branch."</p>
+          <div class="who"><strong>Vardui M.</strong> · client</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIONS + BOOK -->
+  <section id="locations">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Visit or book</div>
+          <h2>Two clinics in Yerevan</h2>
+        </div>
+        <p class="desc">Amiryan Street and Sayat-Nova — both reachable on the same three phone lines.</p>
+      </div>
+      <div class="locations-inner">
+        <div class="loc-card">
+          <h3>Amiryan branch</h3>
+          <div class="loc-line"><strong>Address —</strong>&nbsp;Amiryan St. 27, building 8, Yerevan</div>
+          <div class="loc-line tel"><strong>Tel —</strong>&nbsp;+374&nbsp;10&nbsp;500&nbsp;267</div>
+        </div>
+        <div class="loc-card">
+          <h3>Sayat-Nova branch</h3>
+          <div class="loc-line"><strong>Address —</strong>&nbsp;Sayat-Nova Ave. 19, Yerevan</div>
+          <div class="loc-line tel"><strong>Tel —</strong>&nbsp;+374&nbsp;93&nbsp;265&nbsp;600</div>
+          <div class="loc-line" style="margin-top:14px">
+            <strong>Email —</strong>&nbsp;info@oxygenclinics.am
+          </div>
+        </div>
+        <div class="loc-card" id="book">
+          <h3>Request a consultation</h3>
+          <form class="book" id="bookForm">
+            <div class="field">
+              <label for="fname">Full name</label>
+              <input id="fname" name="fname" type="text" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="fphone">Phone</label>
+              <input id="fphone" name="fphone" type="tel" required autocomplete="tel" />
+            </div>
+            <div class="field">
+              <label for="floc">Preferred branch</label>
+              <select id="floc" name="floc">
+                <option>Amiryan</option>
+                <option>Sayat-Nova</option>
+                <option>No preference</option>
+              </select>
+            </div>
+            <button class="btn btn-primary" type="submit" style="justify-content:center">Send request</button>
+            <p class="form-status" id="formStatus" role="status"></p>
+            <p class="form-note">Design concept — this form is not yet connected to a live booking system.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-inner">
+      <div class="foot-col">
+        <a class="logo" href="#top" aria-label="Oxygen home">
+          <span class="leaf" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21C7 21 4 17.5 4 12.5 4 7 8 3 15 3c0 8-3 12-3 18Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+          </span>
+          <span>OXYGEN</span>
+        </a>
+        <p style="margin-top:16px; font-size:13.5px; color:var(--ink-soft); max-width:32ch;">Aesthetic &amp; medical center. Licensed by the RA Ministry of Health. Yerevan, Armenia.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#treatments">Medical Cosmetology</a></li>
+          <li><a href="#treatments">Aesthetic Cosmetology</a></li>
+          <li><a href="#treatments">Hair Removal</a></li>
+          <li><a href="#diagnostics">Ultrasound Diagnostics</a></li>
+          <li><a href="#treatments">Academy</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Center</h5>
+        <ul>
+          <li><a href="#specialists">Specialists</a></li>
+          <li><a href="#results">Client Results</a></li>
+          <li><a href="#locations">Locations</a></li>
+          <li><a href="#book">Book a Visit</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="https://www.instagram.com/oxygen.clinics/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/OxygenMedCenter" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="mailto:info@oxygenclinics.am">info@oxygenclinics.am</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Oxygen Aesthetic &amp; Medical Center</span>
+      <span class="concept-tag">Redesign concept — prepared for client review</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var toggle = document.querySelector('.menu-toggle');
+    var links = document.querySelector('nav.links');
+    if (toggle && links){
+      toggle.addEventListener('click', function(){
+        var open = links.style.display === 'flex';
+        links.style.display = open ? 'none' : 'flex';
+        links.style.flexDirection = 'column';
+        links.style.position = 'absolute';
+        links.style.top = '76px';
+        links.style.left = '0';
+        links.style.right = '0';
+        links.style.background = 'var(--ground)';
+        links.style.padding = '20px 24px';
+        links.style.borderBottom = '1px solid var(--line)';
+        toggle.setAttribute('aria-expanded', String(!open));
+      });
+    }
+
+    var form = document.getElementById('bookForm');
+    var status = document.getElementById('formStatus');
+    if (form && status){
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        status.textContent = 'Concept only — wire this to your phone/CRM before launch.';
+      });
+    }
+  })();
+</script>

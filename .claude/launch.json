@@ -1,0 +1,26 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "TechnoIT",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "php -S localhost:$PORT"],
+      "port": 8000,
+      "autoPort": true
+    },
+    {
+      "name": "artfocus",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "cd '/Users/Grigor/Documents/Developers Bloom/Website of Devs/Artfocus production' && npm run dev -- -p $PORT"],
+      "port": 3010,
+      "autoPort": true
+    },
+    {
+      "name": "oxygen",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "cd Oxygen && php -S localhost:$PORT"],
+      "port": 3011,
+      "autoPort": true
+    }
+  ]
+}

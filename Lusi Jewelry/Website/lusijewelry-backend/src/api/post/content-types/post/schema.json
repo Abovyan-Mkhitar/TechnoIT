@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Blog Post",
+    "description": "Blog / news articles"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title_hy": {
+      "type": "string",
+      "required": true
+    },
+    "title_en": {
+      "type": "string",
+      "required": true
+    },
+    "title_ru": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title_en",
+      "required": true
+    },
+    "excerpt_hy": {
+      "type": "text"
+    },
+    "excerpt_en": {
+      "type": "text"
+    },
+    "excerpt_ru": {
+      "type": "text"
+    },
+    "content_hy": {
+      "type": "richtext"
+    },
+    "content_en": {
+      "type": "richtext"
+    },
+    "content_ru": {
+      "type": "richtext"
+    },
+    "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}
