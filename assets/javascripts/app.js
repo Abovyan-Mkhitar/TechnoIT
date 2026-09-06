@@ -309,6 +309,22 @@ if (gsap && ScrollTrigger) {
   });
 }
 
+/* ---------------- Testimonial carousels ---------------- */
+document.querySelectorAll("[data-testimonials]").forEach((carousel) => {
+  const viewport = carousel.querySelector(".testimonial-viewport");
+  const prevBtn = carousel.querySelector(".testimonial-btn.prev");
+  const nextBtn = carousel.querySelector(".testimonial-btn.next");
+  if (!viewport) return;
+  const scrollByCard = (dir) => {
+    const card = viewport.querySelector(".testimonial-card");
+    if (!card) return;
+    const gap = parseFloat(getComputedStyle(viewport).gap) || 0;
+    viewport.scrollBy({ left: (card.getBoundingClientRect().width + gap) * dir, behavior: "smooth" });
+  };
+  prevBtn?.addEventListener("click", () => scrollByCard(-1));
+  nextBtn?.addEventListener("click", () => scrollByCard(1));
+});
+
 /* ---------------- FAQ accordion ---------------- */
 document.querySelectorAll(".faq-item").forEach((item) => {
   const q = item.querySelector(".faq-q");
